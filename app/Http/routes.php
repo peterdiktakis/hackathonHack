@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'LandingController@index');
+Route::get('/', 'PagesController@landing');
 
 Route::get('home', 'HomeController@index');
 Route::get('about', 'PagesController@about');
