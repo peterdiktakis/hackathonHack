@@ -12,6 +12,11 @@ class PagesController extends Controller {
         return view('pages.about');
     }
 
+  public function landing()
+  {
+    return view('pages.landing');
+  }
+
 	/**
 	 * Display a listing of the resource.
 	 *
