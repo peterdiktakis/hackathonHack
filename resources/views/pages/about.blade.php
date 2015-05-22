@@ -4,7 +4,7 @@
     <div class="container">
         <h1>About us</h1>
 
-        <p>Hackathon 2015</p>
+        <p>Hackathon 2015 Mo Fuckers</p>
 
     </div>
 
