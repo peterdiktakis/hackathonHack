@@ -1,0 +1,58 @@
+/*FONTS*/
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Roboto Thin'), local('Roboto-Thin'), url(../../public/fonts/Roboto.ttf);
+}
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Roboto Thin'), local('Roboto-Thin'), url(../../public/fonts/Raleway-Light.ttf);
+}
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Roboto Thin'), local('Roboto-Thin'), url(../../public/fonts/Oswald-Regular.ttf);
+}
+.raleway{
+    font-family: "Raleway", Helvetica, Arial, sans-serif !important;
+}
+.roboto{
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+.oswald{
+    font-family: "Oswald", Helvetica, Arial, sans-serif;
+}
+/*END FONTS*/
+
+/* BUTTONS*/
+.btn-outline{
+    border-radius:0;
+    background:transparent;
+    border: solid 3px #FFF;
+    color: #FFF;
+    text-transform: uppercase;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    -ms-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+}
+.btn-outline:hover{
+    background:#FFF;
+    color: #000;
+}
+
+
+
+/* END BUTTONS */
+
+
+/*UTIL*/
+
+
+
+/* END UTIL*/
