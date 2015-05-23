@@ -6231,3 +6231,10 @@ label,
 .checkbox label {
   font-weight: 300;
 }
+* {
+  background-color: hotpink;
+  border: 1px solid white;
+  border-radius: 0;
+}
+
+/*# sourceMappingURL=app.css.map */
