@@ -8,13 +8,13 @@
         <div class="loader-overlay"></div>
     </div>
     <div class="wrapper">
-        <div class="name">
-            <h1>&#47;&#47;Hack</h1>
-        </div>
-        <div class="hack">
-            <img src="/images/hackathon.png" alt="hackathon"/>
-        </div>
-        <div class="page">
+    <div class="name">
+        <h3>&#47;&#47;Hack</h3>
+    </div>
+    <div class="hack">
+        <img src="/images/hackathon.png" alt="hackathon"/>
+    </div>
+    <div class="page">
             <div id="carousel" class="owl-carousel">
                 <div class="carousel-item">
                     <h1 class='text-center'>Welcome to our Travel App</h1>
@@ -25,6 +25,8 @@
                         {!! Form::open(array('method' => 'get', 'url' => 'test', 'id' => 'searchForm')) !!}
                         <div class="form-group">
                             {!! Form::text('location', null, ['id' => 'searchBox', 'class' => 'form-control']) !!}
+                            <div class="load-listener"></div>
+
                         </div>
                         <div class="form-group">
                             {!! Form::submit('Search', ['name' => 'submit', 'class' => 'btn-default next']) !!}
@@ -191,16 +193,33 @@
             return function (callback, ms) {
                 clearTimeout(timer);
                 timer = setTimeout(callback, ms);
+
+
             };
         })();
 
-        $('#searchBox').autocomplete({
-            lookup: function (query, done) {
-                // Do ajax call or lookup locally, when done,
-                // call the callback and pass your results:
-                var searchText = $('#searchBox').val();
-                var result = null;
-                delay(function () {
+            $('#searchBox').autocomplete({
+                lookup: function (query, done) {
+                    // Do ajax call or lookup locally, when done,
+                    // call the callback and pass your results:
+                    var searchText = $('#searchBox').val();
+                    var result = null;
+
+                    delay(function(){
+                        $(".load-listener").addClass('loader-sm');
+                        $.ajax({
+                            type: 'GET',
+                            url: host + '/suggestions',
+                            data: {location: searchText},
+                            success: function (msg) {
+                                $(".load-listener").removeClass('loader-sm');
+                                done(msg);
+                            }
+                        });
+
+                    }, 400 );
+                },
+                onSelect: function (suggestion) {
                     $.ajax({
                         type: 'GET',
                         url: host + '/location',

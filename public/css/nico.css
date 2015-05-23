@@ -1,7 +1,4 @@
-*{
-    cursor:url('../images/cursor.png'), pointer;
 
-}
 
 h1,h2,h3,h4,h5,h6 {
     color: #ffffff;
@@ -98,6 +95,7 @@ body {
     -o-background-size: cover;
     -webkit-background-size: cover;
     background-size: cover;
+    cursor:url('../images/cursor.png'), pointer;
 }
 
 .form-group {
@@ -144,15 +142,14 @@ body {
 }
 
 .hack {
-
     position: absolute;
     right: 20px;
-    top: 30px;
+    top: 20px;
     opacity: .6;
 }
 
-img{
-    width: 200px;
+.hack img{
+    height: 20px;
 }
 
 
@@ -176,4 +173,37 @@ html, body {
 }
 .footer, .push {
     height: 40px; /* .push must be the same height as .footer */
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.footer p{
+    padding-top: 10px;
+    color: #ffffff;
+    opacity: 0.6;
+}
+
+.autocomplete-suggestions:hover{
+    cursor:url('../images/cursor_black.png'), default;
+}
+
+.loader-sm {
+    animation: spin .70s cubic-bezier(.3,.62,.73,.4) infinite;
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    right:35px;
+    top: 3px;
+}
+
+.load-listener{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
 }
