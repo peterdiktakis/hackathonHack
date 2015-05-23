@@ -19,6 +19,7 @@ Route::get('activity', 'PagesController@activity');
 
 Route::get('suggestions', 'ApiController@suggestions');
 Route::get('date', 'SessionController@date');
+Route::get('location', 'SessionController@location');
 Route::get('hotel', 'ApiController@hotel');
 Route::get('activities', 'ApiController@activities');
 

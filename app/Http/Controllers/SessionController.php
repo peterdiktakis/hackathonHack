@@ -17,4 +17,10 @@ class SessionController extends Controller {
         return array($startDate, $endDate);
     }
 
+    public function location()
+    {
+        Session::put('locationName', Request::get('locationName'));
+        Session::put('locationId', Request::get('locationId'));
+    }
+
 }

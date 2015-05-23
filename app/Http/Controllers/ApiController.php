@@ -40,8 +40,6 @@ class ApiController extends Controller {
     {
         $location = Request::get('location');
         if ($location) {
-            // store search location in Session.
-            Session::put('location', $location);
             $helper = ApiHelper::getInstance();
             $response = $helper->getCities($location);
             return Response::json($response);

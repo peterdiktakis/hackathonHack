@@ -152,7 +152,6 @@
                     url: host + '/suggestions',
                     data: {location: searchText},
                     success: function (msg) {
-
                     }
                 });
             });
@@ -196,7 +195,13 @@
                     }, 400 );
                 },
                 onSelect: function (suggestion) {
-                    alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+                    $.ajax({
+                        type: 'GET',
+                        url: host + '/location',
+                        data: {locationName: suggestion.value, locationId: suggestion.data},
+                        success: function (msg) {
+                        }
+                    });
                 }
             });
 
