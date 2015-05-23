@@ -24,3 +24,5 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+Route::get('testNoham', 'PagesController@testNoham');
