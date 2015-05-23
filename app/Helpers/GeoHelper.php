@@ -30,16 +30,15 @@ class GeoHelper {
        return static::$instance;
     }
 
-    public function get($locationString)
+    public function get($location)
     {
         $geo = 'http://terminal2.expedia.com/x/geo/features?ln.op=cn&ln.value=San Francisco&type=region&apikey=';
         $response = $this->client->get('http://terminal2.expedia.com/x/geo/features?ln.op=cn', [
             'query' => [
-                        'ln.value' => $locationString,
+                        'ln.value' => $location,
                         'type' => 'region',
                         'apikey' => $this->publicKey]
                          ]);
         return $response->json();
-
     }
 }

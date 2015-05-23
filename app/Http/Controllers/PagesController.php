@@ -3,29 +3,37 @@
 use App\Http\Requests;
 use GuzzleHttp\Client;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use Request;
 use App\Helpers\GeoHelper;
 
 class PagesController extends Controller {
 
     public function about()
     {
-        $helper = GeoHelper::getInstance();
-        dd($helper->get('Montreal'));
-
-//        $key = 'wpZa7emWeoA9fG6xP6FIbxMKoNvlAjZE';
-//        $client = new Client();
-//        $geo = 'http://terminal2.expedia.com/x/geo/features?ln.op=cn&ln.value=San Francisco&type=region&apikey=';
-//        $response = $client->get($geo . $key);
-//
-//        dd($response->json());
-     //   return view('pages.about');
+//        $helper = GeoHelper::getInstance();
+//        $locations = $helper->get('Montreal');
+        return view('pages.about');
     }
 
-  public function landing()
-  {
-     return view('pages.landing');
-  }
+    public function test()
+    {
+        $helper = GeoHelper::getInstance();
+        $location = Request::get('location');
+        $locations = $helper->get($location);
+
+        $cities = array();
+        foreach($locations as $location) {
+            $cities[] = $location['name'];
+        }
+        return $cities;
+
+        //return $input;
+
+    }
+    public function landing()
+    {
+        return view('pages.landing');
+    }
 
 	/**
 	 * Display a listing of the resource.
@@ -34,7 +42,6 @@ class PagesController extends Controller {
 	 */
 	public function index()
 	{
-		//
 	}
 
 	/**

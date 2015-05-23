@@ -16,6 +16,8 @@ Route::get('/', 'PagesController@landing');
 Route::get('home', 'HomeController@index');
 Route::get('about', 'PagesController@about');
 
+Route::get('test', 'PagesController@test');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
