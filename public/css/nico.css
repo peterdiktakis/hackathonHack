@@ -126,10 +126,7 @@ body {
 .navigation .arrow:hover{
     opacity: 1;
     background-image: url("../images/arrow_shadow.png");
-}
-
-.navigation .arrow img{
-
+    cursor: pointer;
 }
 
 .arrow-right{
