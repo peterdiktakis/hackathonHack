@@ -24,7 +24,16 @@
                     </div>
                     <div class="carousel-item">
                         <div id ='cities'>
-                            <h1>You know i'm all about that bass Jerry !</h1>
+                            <p id="dateInput">
+                                <input type="text" id="startDate" class="date start" placeholder="Check in"/>
+                                <input type="text" class="date end" placeholder="Check out"/>
+                            </p>
+                            <div id ='cities'>
+
+                            </div>
+                            <h2 id ='eventsExampleStatus'>test</h2>
+
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -39,10 +48,32 @@
 
     <link rel="stylesheet" href="/owl.carousel/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="/owl.carousel/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-datepicker.css" />
+
     <script src="/owl.carousel/assets/js/jquery-1.9.1.min.js"></script>
     <script src="/owl.carousel/owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="/js/bootstrap-datepicker.js"></script>
+
+    <script type="text/javascript" src="/js/jquery.timepicker.js"></script>
+    <script type="text/javascript" src="/js/datepair.js"></script>
+
+
     <script type="text/javascript">
 
+        $('#dateInput .date').datepicker({
+            'format': 'm/d/yyyy',
+            'autoclose': true
+        });
+
+
+        // initialize datepair
+        var basicExampleEl = document.getElementById('dateInput');
+        var datepair = new Datepair(basicExampleEl);
+
+        // some sample handlers
+        $('#dateInput').on('rangeSelected', function() {
+            $('#eventsExampleStatus').text($("#startDate").val());
+        });
 
 
         var host = "{{URL::to('/')}}";
