@@ -7,21 +7,28 @@
     <div class="page">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <h1 class='text-center'>Welcome to our Travel App</h1>
-                <h3 class='text-center'>Travel deep into the Voodoo !</h3>
 
-                <div class="search"
-                {!! Form::open(array('method' => 'get', 'url' => 'test', 'id' => 'searchForm')) !!}
-                    <div class="form-group col-xs-10">
-                        {!! Form::text('location', null, ['id' => 'searchBox', 'class' => 'form-control']) !!}
+
+                <div id="carousel" class="owl-carousel">
+                    <div class="carousel-item">
+                        <h1 class='text-center'>Welcome to our Travel App</h1>
+                        <h3 class='text-center'>Travel deep into the Voodoo !</h3>
+                        <div class="search">
+                        {!! Form::open(array('method' => 'get', 'url' => 'test', 'id' => 'searchForm')) !!}
+                            <div class="form-group col-xs-10">
+                                {!! Form::text('location', null, ['id' => 'searchBox', 'class' => 'form-control']) !!}
+                            </div>
+                            <div class="form-group col-xs-2">
+                                {!! Form::submit('Search', ['name' => 'submit', 'class' => 'btn-default']) !!}
+                            </div>
+                        {!! Form::close() !!}
+                        </div>
                     </div>
-                    <div class="form-group col-xs-2">
-                        {!! Form::submit('Search', ['name' => 'submit', 'class' => 'btn-default']) !!}
+                    <div class="carousel-item">
+                        <div id ='cities'>
+                            <h1>You know i'm all about that bass Jerry !</h1>
+                        </div>
                     </div>
-                {!! Form::close() !!}
-
-                <div id ='cities'>
-
                 </div>
 
             </div>
@@ -34,8 +41,10 @@
     <script type="text/javascript">
 
 
+
         var host = "{{URL::to('/')}}";
         jQuery( document ).ready( function( $ ) {
+
 
             $('#searchForm').on('submit', function (e) {
                 e.preventDefault();
@@ -51,5 +60,13 @@
             });
         });
 
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("#carousel").owlCarousel();
+
+        });
     </script>
 @stop

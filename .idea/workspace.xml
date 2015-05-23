@@ -1,9 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="735b75f9-52a5-418d-bffd-e2a43beeffba" name="Default" comment="Kelvin is the Beast">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/nico.css" afterPath="$PROJECT_DIR$/public/css/nico.css" />
+    <list default="true" id="735b75f9-52a5-418d-bffd-e2a43beeffba" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/img/AjaxLoader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/owl-carousel/AjaxLoader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/ico/apple-touch-icon-114-precomposed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/ico/apple-touch-icon-144-precomposed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/ico/apple-touch-icon-57-precomposed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/ico/apple-touch-icon-72-precomposed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/img/demo-slides/controls.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/img/demo-slides/css3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/ico/favicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/img/demo-slides/feather.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/assets/fullimage1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/assets/fullimage2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/assets/fullimage3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/assets/fullimage4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/assets/fullimage5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/assets/fullimage6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/assets/fullimage7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/img/glyphicons-halflings-green.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/img/glyphicons-halflings-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/img/glyphicons-halflings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/img/demo-slides/grab.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/owl-carousel/grabbing.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/malcolm.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/img/demo-slides/modern.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/img/demo-slides/multi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/img/owl-logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/assets/owl1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/assets/owl2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/assets/owl3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/assets/owl4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/assets/owl5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/assets/owl6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/assets/owl7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/assets/owl8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/img/demo-slides/responsive.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/img/demo-slides/tons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/img/demo-slides/touch.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/img/demo-slides/zombie.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/js/application.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/autoHeight.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/js/bootstrap-collapse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/js/bootstrap-tab.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/js/bootstrap-transition.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/css/bootstrapTheme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/changelog.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/click.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/css/custom.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/custom.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/json/customData.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/customJson.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/json/data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/full.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/images.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/itemsCustom.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/js/jquery-1.9.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/json.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/lazyLoad.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/manipulations.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/navOnTop.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/navOnTop2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/one.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/owl-carousel/owl.carousel.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/owl-carousel/owl.carousel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/owl-carousel/owl.carousel.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/owl-carousel/owl.theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/owl-carousel/owl.transitions.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/owlStatus.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/js/google-code-prettify/prettify.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/js/google-code-prettify/prettify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/progressBar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/randomOrder.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/css/responsive.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/assets/js/google-code-prettify/run_prettify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/scaleup.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/sync.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/owl.carousel/demos/transitions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/landing.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/landing.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hackathonHack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,11 +108,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-26.25" vertical-offset="255" max-vertical-offset="1140">
-              <caret line="59" column="7" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.49261084" vertical-offset="0" max-vertical-offset="1170">
+              <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/owl.carousel/demos/json/data.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="345">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -41,8 +131,8 @@
       <file leaf-file-name="landing.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/landing.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="7.8333335" vertical-offset="278" max-vertical-offset="915">
-              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            <state vertical-scroll-proportion="-17.166666" vertical-offset="548" max-vertical-offset="1170">
+              <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -58,11 +148,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nico.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="nico.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/nico.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5588235" vertical-offset="389" max-vertical-offset="1155">
-              <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1155">
+              <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -208,6 +298,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathonHack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathonHack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -261,11 +369,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/images" />
       <recent name="C:\Hackaton\hackathonHack" />
       <recent name="C:\Hackaton\hackathonHack\vendor" />
       <recent name="C:\Hackaton\hackathonHack\public\fonts" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Hackaton\hackathonHack\public\fonts" />
@@ -481,7 +589,19 @@
       <option name="project" value="LOCAL" />
       <updated>1432390644184</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="searchbox fancy shadow">
+      <created>1432391579309</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1432391579309</updated>
+    </task>
+    <task id="LOCAL-00010" summary="pointer fix&#10;">
+      <created>1432393050677</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1432393050677</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -494,13 +614,13 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25250357" sideWeight="0.22551928" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1879518" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1879518" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891566" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25250357" sideWeight="0.7744807" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25250357" sideWeight="0.7744807" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -534,7 +654,9 @@
     <MESSAGE value="PITER DOESNT HAVE FREE BAGELS ! Piter sucks !" />
     <MESSAGE value="Images and stuff&#10;" />
     <MESSAGE value="Troll" />
-    <option name="LAST_COMMIT_MESSAGE" value="Troll" />
+    <MESSAGE value="searchbox fancy shadow" />
+    <MESSAGE value="pointer fix&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="pointer fix&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -543,22 +665,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Helpers/ApiHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="930" max-vertical-offset="1050">
-          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="93600">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="285">
@@ -913,14 +1019,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.25" vertical-offset="255" max-vertical-offset="1140">
-          <caret line="59" column="7" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/noham.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="945">
@@ -929,18 +1027,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/owl.carousel.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/landing.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.8333335" vertical-offset="278" max-vertical-offset="915">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        <state vertical-scroll-proportion="-17.166666" vertical-offset="548" max-vertical-offset="1170">
+          <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/nico.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5588235" vertical-offset="389" max-vertical-offset="1155">
-          <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1155">
+          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/owl.carousel/demos/json/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49261084" vertical-offset="0" max-vertical-offset="1170">
+          <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
           <folding />
         </state>
       </provider>
