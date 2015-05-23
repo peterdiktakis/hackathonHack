@@ -38,17 +38,19 @@ class ApiHelper {
     {
         $response = $this->client->get('http://terminal2.expedia.com:80/x/nlp/results?', [
             'query' => [
-                        'q' => $location,
-                        'limit' => 10,
-                        'verbose' => FALSE,
-                        'apikey' => $this->publicKey]
-                         ]);
+                'q' => $location,
+                'limit' => 10,
+                'verbose' => FALSE,
+                'apikey' => $this->publicKey]
+        ]);
         $locations = $response->json();
         $cities = array('suggestions' => array());
 
-        foreach($locations['result']['neighborhoods'] as $location) {
-            $center = $location['center'];
-            $cities['suggestions'][] = array("value" => $location['name'], 'data' => $location['id'], 'longitude' => $center['lng'], 'latitude' => $center['lat']);
+        if (isset($locations['result']['neighborhoods'])) {
+            foreach ($locations['result']['neighborhoods'] as $location) {
+                $center = $location['center'];
+                $cities['suggestions'][] = array("value" => $location['name'], 'data' => $location['id'], 'longitude' => $center['lng'], 'latitude' => $center['lat']);
+              }
         }
 
         return $cities;
