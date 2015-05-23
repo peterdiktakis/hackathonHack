@@ -8,13 +8,13 @@
         <div class="loader-overlay"></div>
     </div>
     <div class="wrapper">
-    <div class="name">
-        <h1>&#47;&#47;Hack</h1>
-    </div>
-    <div class="hack">
-        <img src="/images/hackathon.png" alt="hackathon"/>
-    </div>
-    <div class="page">
+        <div class="name">
+            <h1>&#47;&#47;Hack</h1>
+        </div>
+        <div class="hack">
+            <img src="/images/hackathon.png" alt="hackathon"/>
+        </div>
+        <div class="page">
             <div id="carousel" class="owl-carousel">
                 <div class="carousel-item">
                     <h1 class='text-center'>Welcome to our Travel App</h1>
@@ -34,6 +34,7 @@
                 </div>
                 <div class="carousel-item">
                     <div id='cities'>
+                        <h1 class="text-center" id='eventsExampleStatus'>Pick up a date</h1>
                         <p id="dateInput" class="text-center">
                             <input type="text" id="startDate" class="date start" placeholder="Check in"/>
                             <input type="text" id="endDate" class="date end" placeholder="Check out"/>
@@ -42,20 +43,37 @@
                         <div id='cities'>
 
                         </div>
-                        <h2 class="text-center" id='eventsExampleStatus'>Pick up a date bitch !</h2>
+                        
+
 
                     </div>
                 </div>
+                <div class="carousel-item">
+                    <div id='activities' class="text-center">
+
+
+                        <h1 class="text-center">Choose an activity!</h1>
+                        <select class="select-activity">
+                            <option value="bar">Bar</option>
+                            <option value="restaurant" selected>Restaurant</option>
+                            <option value="family">Family trip</option>
+
+                        </select>
+
+                    </div>
                 </div>
+                <div class="carousel-item">
+                </div>
+            </div>
 
 
-</div>
+        </div>
         <div class="navigation">
             <div class="arrow arrow-left prev"></div>
             <div class="arrow arrow-right next"></div>
         </div>
         <div class="push"></div>
-</div>
+    </div>
 
 
 @stop
@@ -162,33 +180,27 @@
 
     </script>
     <script type="text/javascript">
-        var delay = (function(){
+        $('.select-activity').change(function () {
+            $('#carousel').trigger('owl.next');
+        });
+    </script>
+
+    <script type="text/javascript">
+        var delay = (function () {
             var timer = 0;
-            return function(callback, ms){
-                clearTimeout (timer);
+            return function (callback, ms) {
+                clearTimeout(timer);
                 timer = setTimeout(callback, ms);
             };
         })();
 
-            $('#searchBox').autocomplete({
-                lookup: function (query, done) {
-                    // Do ajax call or lookup locally, when done,
-                    // call the callback and pass your results:
-                    var searchText = $('#searchBox').val();
-                    var result = null;
-                    delay(function(){
-                        $.ajax({
-                            type: 'GET',
-                            url: host + '/suggestions',
-                            data: {location: searchText},
-                            success: function (msg) {
-                                done(msg);
-                            }
-                        });
-
-                    }, 400 );
-                },
-                onSelect: function (suggestion) {
+        $('#searchBox').autocomplete({
+            lookup: function (query, done) {
+                // Do ajax call or lookup locally, when done,
+                // call the callback and pass your results:
+                var searchText = $('#searchBox').val();
+                var result = null;
+                delay(function () {
                     $.ajax({
                         type: 'GET',
                         url: host + '/location',
@@ -197,7 +209,7 @@
                         success: function (msg) {
                         }
                     });
-                }
+                });
             }).keypress(function(e) {
 
                 if (e.keyCode === 13)
