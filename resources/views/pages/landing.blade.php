@@ -42,8 +42,17 @@
                     </div>
                 </div>
 
-            
+
     </div>
+        <div class="navigation">
+            <div class="arrow arrow-left">
+
+            </div>
+            <div class="arrow arrow-right">
+
+
+            </div>
+        </div>
 
 @stop
 
