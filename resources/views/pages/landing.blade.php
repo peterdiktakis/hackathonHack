@@ -1,22 +1,24 @@
 @extends('app')
 @section('title')
-    Rolling in the Voodoo
+    //Hack Faster
 @stop
 @section('content')
-<div class="container">
+    <div class="name">
+        <h1>&#47;&#47;Hack</h1>
+    </div>
     <div class="page">
         <div class="row">
-            <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-12">
                 <div id="carousel" class="owl-carousel">
                     <div class="carousel-item">
                         <h1 class='text-center'>Welcome to our Travel App</h1>
                         <h3 class='text-center'>Travel deep into the Voodoo !</h3>
                         <div class="search">
                         {!! Form::open(array('method' => 'get', 'url' => 'test', 'id' => 'searchForm')) !!}
-                            <div class="form-group col-xs-10">
+                            <div class="form-group">
                                 {!! Form::text('location', null, ['id' => 'searchBox', 'class' => 'form-control']) !!}
                             </div>
-                            <div class="form-group col-xs-2">
+                            <div class="form-group">
                                 {!! Form::submit('Search', ['name' => 'submit', 'class' => 'btn-default']) !!}
                             </div>
                         {!! Form::close() !!}
@@ -34,14 +36,13 @@
                             <h2 id ='eventsExampleStatus'>test</h2>
 
                         </div>
-                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
-</div>
+
 @stop
 
 @section('page-script')
@@ -81,7 +82,7 @@
 
 
             $("#carousel").owlCarousel({
-                items : 1,
+                singleItem : true
             });
 
             $('#searchForm').on('submit', function (e) {

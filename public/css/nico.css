@@ -1,12 +1,12 @@
 *{
-    cursor:url('../images/malcolm.png'), pointer;
+    cursor:url('../images/cursor.png'), pointer;
+
 }
 
 h1,h2,h3,h4,h5,h6 {
     color: #ffffff;
     font-weight: 100;
 }
-
 
 .btn-default {
     border: 2px solid white;
@@ -33,7 +33,17 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .btn-default:focus{
+    border-color: #ffffff;
+}
 
+.form-group .btn-default {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.name {
+    margin-left: 20px;
+    opacity: 0.6;
 }
 
 #searchBox{
@@ -42,6 +52,9 @@ h1,h2,h3,h4,h5,h6 {
     border-radius: 0;
     height: 40px;
     color: #ffffff;
+    width: 80%;
+    margin-left: 0 auto;
+    display: inline-block;
 }
 
 #searchBox:focus {
@@ -60,7 +73,9 @@ body {
     background-image: url("../images/background_darker.jpg");
 }
 
-
+.form-group {
+    text-align: center;
+}
 
 .search{
     margin-top: 50px;
@@ -70,3 +85,11 @@ body {
 .page {
     margin-top: 200px;
 }
+
+@media (min-width: 768px) {
+    #searchBox {
+        width: 600px;
+        margin:0;
+    }
+}
+
