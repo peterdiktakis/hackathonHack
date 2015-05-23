@@ -27,7 +27,7 @@
                             {!! Form::text('location', null, ['id' => 'searchBox', 'class' => 'form-control']) !!}
                         </div>
                         <div class="form-group">
-                            {!! Form::submit('Search', ['name' => 'submit', 'class' => 'btn-default']) !!}
+                            {!! Form::submit('Search', ['name' => 'submit', 'class' => 'btn-default next']) !!}
                         </div>
                         {!! Form::close() !!}
                     </div>
@@ -145,6 +145,7 @@
                     url: host + '/suggestions',
                     data: {location: searchText},
                     success: function (msg) {
+
                     }
                 });
             });

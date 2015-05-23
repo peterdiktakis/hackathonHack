@@ -36,27 +36,19 @@ class ApiHelper {
      */
     public function getCities($location)
     {
-        $response = $this->client->get('http://terminal2.expedia.com/x/geo/features?ln.op=cn', [
+        $response = $this->client->get('http://terminal2.expedia.com:80/x/nlp/results?', [
             'query' => [
-                        'ln.value' => $location,
-                        'type' => 'region',
+                        'q' => $location,
+                        'limit' => 10,
+                        'verbose' => FALSE,
                         'apikey' => $this->publicKey]
                          ]);
         $locations = $response->json();
         $cities = array('suggestions' => array());
-        foreach($locations as $location) {
+
+        foreach($locations['result']['neighborhoods'] as $location) {
             $cities['suggestions'][] = array("value" => $location['name'], 'data' => $location['id']);
         }
-
-//        $in = array(
-//            "suggestions" => array(
-//                array("value" => "one", "data" => "ON"),
-//                array("value" => "two", "data" => "TW"),
-//                array("value" => "three", "data" => "TH"),
-//                array("value" => "four", "data" => "FO"),
-//            )
-//
-//        );
 
         return $cities;
     }
