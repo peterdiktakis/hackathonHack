@@ -45,10 +45,10 @@
 
     </div>
         <div class="navigation">
-            <div class="arrow arrow-left">
+            <div class="arrow arrow-left prev">
 
             </div>
-            <div class="arrow arrow-right">
+            <div class="arrow arrow-right next">
 
 
             </div>
@@ -114,8 +114,18 @@
 
 
             $("#carousel").owlCarousel({
-                singleItem : true
+                singleItem : true,
+                rewindNav: false
             });
+
+            var owl = $("#carousel");
+
+            $(".next").click(function(){
+                owl.trigger('owl.next');
+            })
+            $(".prev").click(function(){
+                owl.trigger('owl.prev');
+            })
 
             $('#searchForm').on('submit', function (e) {
                 e.preventDefault();
