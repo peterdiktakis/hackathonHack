@@ -1,5 +1,26 @@
+h1,h2,h3,h4,h5,h6 {
+    color: #ffffff;
+    font-weight: 100;
+}
+
+
 .btn-default {
     border: 1px solid white;
     letter-spacing: 0.1em;
     font-variant: small-caps;
+    color: #ffffff;
+    padding: 5px;
+    background-color: transparent;
+}
+
+
+
+.section {
+    background-color: #fff;
+    padding: 10px;
+
+}
+
+body {
+    background-image: url("../images/background.jpg");
 }
