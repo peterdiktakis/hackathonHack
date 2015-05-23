@@ -63,7 +63,9 @@ input[type="text"]:focus{
 }
 
 .name {
-    margin-left: 20px;
+    position: absolute;
+    left: 20px;
+    top: 0px;
     opacity: 0.6;
 }
 
@@ -74,7 +76,7 @@ input[type="text"]:focus{
     height: 40px;
     color: #ffffff;
     width: 60%;
-    margin-left: 0 auto;
+    margin: 0 auto;
     display: inline-block;
 }
 
@@ -91,7 +93,11 @@ input[type="text"]:focus{
 }
 
 body {
-    background-image: url("../images/background_darker.jpg");
+    background: url("../images/background_darker.jpg") no-repeat;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
 .form-group {
@@ -103,10 +109,6 @@ body {
     
 }
 
-.page {
-    margin-top: 10%;
-}
-
 .owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {
 
     background-color: #fff;
@@ -114,13 +116,13 @@ body {
 
 .navigation .arrow{
     position: absolute;
-    margin-top: 50px;
     opacity: .4;
     transition: all .15s;
     background-image: url("../images/arrow.png");
     height: 150px;
     width: 60px;
     background-size: contain;
+    top:290px;
 }
 
 .navigation .arrow:hover{
@@ -142,9 +144,10 @@ body {
 }
 
 .hack {
+
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 30px;
     opacity: .6;
 }
 
@@ -152,16 +155,25 @@ img{
     width: 200px;
 }
 
-.footer{
-    position: absolute;
-    bottom: 0px;
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 40px;
-    width: 100%;
-    color: #fff;
+
+/*Sticky footer*/
+.page{
+ padding-top: 15%;
 }
 
-.footer p{
-    margin-top: 10px;
-    opacity: 0.4;
+
+.page{
+    /*height: 100%;*/
+}
+html, body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+    height: 100%;
+    margin: 0 auto -40px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    height: 40px; /* .push must be the same height as .footer */
 }

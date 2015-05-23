@@ -7,6 +7,7 @@
         <div class="loader"></div>
         <div class="loader-overlay"></div>
     </div>
+    <div class="wrapper">
     <div class="name">
         <h1>&#47;&#47;Hack</h1>
     </div>
@@ -14,7 +15,6 @@
         <img src="/images/hackathon.png" alt="hackathon"/>
     </div>
     <div class="page">
-        <div class="col-md-12">
             <div id="carousel" class="owl-carousel">
                 <div class="carousel-item">
                     <h1 class='text-center'>Welcome to our Travel App</h1>
@@ -46,25 +46,18 @@
 
                     </div>
                 </div>
-            </div>
+                </div>
 
 
-        </div>
+</div>
         <div class="navigation">
-            <div class="arrow arrow-left prev">
-
-            </div>
+            <div class="arrow arrow-left prev"></div>
+            <div class="arrow arrow-right next"></div>
         </div>
-    </div>
-<div class="navigation">
-    <div class="arrow arrow-left prev"></div>
-    <div class="arrow arrow-right next"></div>
+        <div class="push"></div>
 </div>
 
 
-            </div>
-        </div>
-    </div>
 @stop
 
 @section('footer')
