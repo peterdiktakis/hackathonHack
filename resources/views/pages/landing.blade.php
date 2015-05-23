@@ -36,6 +36,7 @@
                 </div>
                 <div class="carousel-item">
                     <div id='cities'>
+                        <h1 class="text-center" id='eventsExampleStatus'>Pick up a date</h1>
                         <p id="dateInput" class="text-center">
                             <input type="text" id="startDate" class="date start" placeholder="Check in"/>
                             <input type="text" id="endDate" class="date end" placeholder="Check out"/>
@@ -44,20 +45,37 @@
                         <div id='cities'>
 
                         </div>
-                        <h2 class="text-center" id='eventsExampleStatus'>Pick up a date bitch !</h2>
+                        
+
 
                     </div>
                 </div>
+                <div class="carousel-item">
+                    <div id='activities' class="text-center">
+
+
+                        <h1 class="text-center">Choose an activity!</h1>
+                        <select class="select-activity">
+                            <option value="bar">Bar</option>
+                            <option value="restaurant" selected>Restaurant</option>
+                            <option value="family">Family trip</option>
+
+                        </select>
+
+                    </div>
                 </div>
+                <div class="carousel-item">
+                </div>
+            </div>
 
 
-</div>
+        </div>
         <div class="navigation">
             <div class="arrow arrow-left prev"></div>
             <div class="arrow arrow-right next"></div>
         </div>
         <div class="push"></div>
-</div>
+    </div>
 
 
 @stop
@@ -164,10 +182,16 @@
 
     </script>
     <script type="text/javascript">
-        var delay = (function(){
+        $('.select-activity').change(function () {
+            $('#carousel').trigger('owl.next');
+        });
+    </script>
+
+    <script type="text/javascript">
+        var delay = (function () {
             var timer = 0;
-            return function(callback, ms){
-                clearTimeout (timer);
+            return function (callback, ms) {
+                clearTimeout(timer);
                 timer = setTimeout(callback, ms);
 
 
@@ -204,7 +228,7 @@
                         success: function (msg) {
                         }
                     });
-                }
+                });
             }).keypress(function(e) {
 
                 if (e.keyCode === 13)
