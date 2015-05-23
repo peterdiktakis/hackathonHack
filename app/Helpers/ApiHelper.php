@@ -2,7 +2,7 @@
 
 use GuzzleHttp\Client;
 
-class GeoHelper {
+class ApiHelper {
 
     private $publicKey;
     private $privateKey;
@@ -19,7 +19,7 @@ class GeoHelper {
 
     protected function __clone()
     {
-
+        // no cloning allowed
     }
 
     public static function getInstance()
@@ -34,7 +34,7 @@ class GeoHelper {
      * @param $location
      * @return list of cities / locations
      */
-    public function get($location)
+    public function getCities($location)
     {
         $response = $this->client->get('http://terminal2.expedia.com/x/geo/features?ln.op=cn', [
             'query' => [
@@ -50,5 +50,16 @@ class GeoHelper {
         }
 
         return $cities;
+    }
+
+    public function getToDo($location)
+    {
+        $response = $this->client->get('http://terminal2.expedia.com/x/activities/search?', [
+            'query' => [
+                'location' => $location,
+                'apikey' => $this->publicKey]
+        ]);
+
+        return $response->json();
     }
 }

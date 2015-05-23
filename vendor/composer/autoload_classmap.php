@@ -11,7 +11,7 @@ return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Events\\Event' => $baseDir . '/app/Events/Event.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
-    'App\\Helpers\\GeoHelper' => $baseDir . '/app/Helpers/GeoHelper.php',
+    'App\\Helpers\\GeoHelper' => $baseDir . '/app/Helpers/ApiHelper.php',
     'App\\Http\\Controllers\\Auth\\AuthController' => $baseDir . '/app/Http/Controllers/Auth/AuthController.php',
     'App\\Http\\Controllers\\Auth\\PasswordController' => $baseDir . '/app/Http/Controllers/Auth/PasswordController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',

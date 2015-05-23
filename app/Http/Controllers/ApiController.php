@@ -3,15 +3,22 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Request;
-use App\Helpers\GeoHelper;
+use App\Helpers\ApiHelper;
 
 class ApiController extends Controller {
 
 	public function suggestions()
     {
-        $helper = GeoHelper::getInstance();
         $location = Request::get('location');
-        return $helper->get($location);
+        $helper = ApiHelper::getInstance();
+        return $helper->getCities($location);
     }
+
+    public function todo()
+    {
+        
+    }
+
+
 
 }
