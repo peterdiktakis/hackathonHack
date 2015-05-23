@@ -20,7 +20,8 @@ class SessionController extends Controller {
     public function location()
     {
         Session::put('locationName', Request::get('locationName'));
-        Session::put('locationId', Request::get('locationId'));
+        Session::put('longitude', Request::get('longitude'));
+        Session::put('latitude', Request::get('latitude'));
     }
 
 }

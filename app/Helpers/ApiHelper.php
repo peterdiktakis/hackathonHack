@@ -47,15 +47,24 @@ class ApiHelper {
         $cities = array('suggestions' => array());
 
         foreach($locations['result']['neighborhoods'] as $location) {
-            $cities['suggestions'][] = array("value" => $location['name'], 'data' => $location['id']);
+            $center = $location['center'];
+            $cities['suggestions'][] = array("value" => $location['name'], 'data' => $location['id'], 'longitude' => $center['lng'], 'latitude' => $center['lat']);
         }
 
         return $cities;
     }
 
-    public function getHotels($startDate, $endDate, $location)
+    public function getHotels($startDate, $endDate, $location, $radius = '5km')
     {
-
+        $response = $this->client->get('http://terminal2.expedia.com/x/hotels?', [
+            'query' => [
+                'location' => $location,
+                'radius' => $radius,
+                'dates' => $startDate . ',' . $endDate,
+                'apikey' => $this->publicKey]
+        ]);
+        $locations = $response->json();
+        return dd($locations);
     }
 
     public function getActivities($startDate, $endDate, $location)

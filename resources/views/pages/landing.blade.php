@@ -42,21 +42,7 @@
                         <div id='cities'>
 
                         </div>
-                        <h2 class="text-center" id='eventsExampleStatus'>Pick up a date bitch!</h2>
-
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div id='activities' class="text-center">
-
-
-                        <h1 class="text-center">Choose an activity!</h1>
-                        <select class="select-activity">
-                            <option value="bar">Bar</option>
-                            <option value="restaurant" selected>Restaurant</option>
-                            <option value="family">Family trip</option>
-
-                        </select>
+                        <h2 class="text-center" id='eventsExampleStatus'>Pick up a date bitch !</h2>
 
                     </div>
                 </div>
@@ -206,11 +192,28 @@
                     $.ajax({
                         type: 'GET',
                         url: host + '/location',
-                        data: {locationName: suggestion.value, locationId: suggestion.data},
+                        timeout: 2000,
+                        data: {locationName: suggestion.value, locationId: suggestion.data, latitude: suggestion.latitude, longitude: suggestion.longitude},
                         success: function (msg) {
                         }
                     });
                 }
+            }).keypress(function(e) {
+
+                if (e.keyCode === 13)
+                {
+                    var owl = $("#carousel");
+                    e.preventDefault();
+                    $.ajax({
+                        type: 'GET',
+                        url: host + '/location',
+                        data: {locationName: $('#searchBox').val()},
+                        success: function () {
+                            owl.trigger('owl.next');
+                        }
+                    });
+                }
+
             });
 
     </script>

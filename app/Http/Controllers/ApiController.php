@@ -20,19 +20,19 @@ class ApiController extends Controller {
             $results = $helper->getActivities($startDate, $endDate, $location);
             return dd($results);
         }
-        //http://terminal2.expedia.com/x/activities/search?location=London&apikey={INSERT_YOUR_API_KEY}
     }
     public function hotel()
     {
         $startDate  = Session::get('startDate');
         $endDate = Session::get('endDate');
-        $location = Session::get('location');
-        if ($startDate && $endDate && $location) {
+        $longitude = Session::get('longitude');
+        $latitude = Session::get('latitude');
+        $location = ($longitude && $latitude) ? ($latitude . ',' . $longitude) : Session::get('locationName');
+
+        if ($location) {
             $helper = ApiHelper::getInstance();
-            $results = $helper->getHotels($startDate, $endDate, $location);
-            return dd($results);
-        } else {
-            return array($startDate, $endDate, $location);
+            $response = $helper->getHotels($startDate, $endDate, $location, '5km');
+            return $response;
         }
     }
 
