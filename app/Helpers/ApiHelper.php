@@ -64,7 +64,7 @@ class ApiHelper {
                 'apikey' => $this->publicKey]
         ]);
         $locations = $response->json();
-        return dd($locations);
+        return $locations;
     }
 
     public function getActivities($startDate, $endDate, $location)

@@ -32,7 +32,7 @@ class ApiController extends Controller {
         if ($location) {
             $helper = ApiHelper::getInstance();
             $response = $helper->getHotels($startDate, $endDate, $location, '5km');
-            return $response;
+            return dd($response);
         }
     }
 
