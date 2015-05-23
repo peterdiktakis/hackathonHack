@@ -1,10 +1,8 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use GuzzleHttp\Client;
 use App\Http\Controllers\Controller;
 use Request;
-use App\Helpers\GeoHelper;
 
 class PagesController extends Controller {
 
@@ -15,21 +13,6 @@ class PagesController extends Controller {
         return view('pages.about');
     }
 
-    public function test()
-    {
-        $helper = GeoHelper::getInstance();
-        $location = Request::get('location');
-        $locations = $helper->get($location);
-
-        $cities = array();
-        foreach($locations as $location) {
-            $cities[] = $location['name'];
-        }
-        return $cities;
-
-        //return $input;
-
-    }
     public function landing()
     {
         return view('pages.landing');

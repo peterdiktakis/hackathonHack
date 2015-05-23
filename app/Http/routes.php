@@ -16,7 +16,7 @@ Route::get('/', 'PagesController@landing');
 Route::get('home', 'HomeController@index');
 Route::get('about', 'PagesController@about');
 
-Route::get('test', 'PagesController@test');
+Route::get('suggestions', 'ApiController@suggestions');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
