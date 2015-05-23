@@ -6,9 +6,7 @@
     <div class="name">
         <h1>&#47;&#47;Hack</h1>
     </div>
-    <div class="page">
-        <div class="row">
-            <div class="col-md-12">
+    <div class="page"><div class="col-md-12">
                 <div id="carousel" class="owl-carousel">
                     <div class="carousel-item">
                         <h1 class='text-center'>Welcome to our Travel App</h1>
@@ -39,8 +37,7 @@
                     </div>
                 </div>
 
-            </div>
-        </div>
+            
     </div>
 
 @stop
