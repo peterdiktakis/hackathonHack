@@ -18,12 +18,17 @@ h1,h2,h3,h4,h5,h6 {
     -ms-transition: all .35s;
     -o-transition: all .35s;
     transition: all .35s;
+    outline:none;
 }
 
 .btn-default:hover{
     background-color: #fff;
     color: #7d6587;
     border-color: #ffffff;
+}
+
+.btn-default:focus{
+
 }
 
 #searchBox{
@@ -41,8 +46,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 body {
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/background_darker.jpg");
 }
+
+
 
 .search{
     margin-top: 50px;
@@ -50,5 +57,5 @@ body {
 }
 
 .page {
-    margin-top: 150px;
+    margin-top: 200px;
 }
