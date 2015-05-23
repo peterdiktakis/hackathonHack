@@ -7,6 +7,9 @@
 	<title>@yield('title')</title>
     <link href="{{ asset('/css/owl.carousel.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="/owl.carousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="/owl.carousel/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-datepicker.css" />
     <link href="{{ asset('/css/nico.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/noham.css') }}" rel="stylesheet">
 

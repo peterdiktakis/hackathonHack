@@ -10,40 +10,43 @@
     <div class="name">
         <h1>&#47;&#47;Hack</h1>
     </div>
-    <div class="page"><div class="col-md-12">
-                <div id="carousel" class="owl-carousel">
-                    <div class="carousel-item">
-                        <h1 class='text-center'>Welcome to our Travel App</h1>
-                        <h3 class='text-center'>Travel deep into the Voodoo !</h3>
-                        <div class="search">
+    <div class="page">
+        <div class="col-md-12">
+            <div id="carousel" class="owl-carousel">
+                <div class="carousel-item">
+                    <h1 class='text-center'>Welcome to our Travel App</h1>
+
+                    <h3 class='text-center'>Travel deep into the Voodoo !</h3>
+
+                    <div class="search">
                         {!! Form::open(array('method' => 'get', 'url' => 'test', 'id' => 'searchForm')) !!}
-                            <div class="form-group">
-                                {!! Form::text('location', null, ['id' => 'searchBox', 'class' => 'form-control']) !!}
-                            </div>
-                            <div class="form-group">
-                                {!! Form::submit('Search', ['name' => 'submit', 'class' => 'btn-default']) !!}
-                            </div>
+                        <div class="form-group">
+                            {!! Form::text('location', null, ['id' => 'searchBox', 'class' => 'form-control']) !!}
+                        </div>
+                        <div class="form-group">
+                            {!! Form::submit('Search', ['name' => 'submit', 'class' => 'btn-default']) !!}
+                        </div>
                         {!! Form::close() !!}
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div id ='cities'>
-                            <p id="dateInput" class="text-center">
-                                <input type="text" id="startDate" class="date start" placeholder="Check in"/>
-                                <input type="text" id="endDate" class="date end" placeholder="Check out"/>
-                            </p>
-
-                            <div id ='cities'>
-
-                            </div>
-                            <h2 class="text-center" id ='eventsExampleStatus'>Pick up a date bitch !</h2>
-
-                        </div>
                     </div>
                 </div>
+                <div class="carousel-item">
+                    <div id='cities'>
+                        <p id="dateInput" class="text-center">
+                            <input type="text" id="startDate" class="date start" placeholder="Check in"/>
+                            <input type="text" id="endDate" class="date end" placeholder="Check out"/>
+                        </p>
+
+                        <div id='cities'>
+
+                        </div>
+                        <h2 class="text-center" id='eventsExampleStatus'>Pick up a date bitch !</h2>
+
+                    </div>
+                </div>
+            </div>
 
 
-    </div>
+        </div>
         <div class="navigation">
             <div class="arrow arrow-left prev">
 
@@ -53,18 +56,18 @@
 
             </div>
         </div>
-
+    </div>
 @stop
 
 @section('page-script')
 
-    <link rel="stylesheet" href="/owl.carousel/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="/owl.carousel/owl-carousel/owl.theme.css">
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap-datepicker.css" />
+
 
     <script src="/owl.carousel/assets/js/jquery-1.9.1.min.js"></script>
     <script src="/owl.carousel/owl-carousel/owl.carousel.js"></script>
     <script type="text/javascript" src="/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="/js/jquery.mockjax.js"></script>
+    <script type="text/javascript" src="/js/jquery.autocomplete.js"></script>
 
     <script type="text/javascript" src="/js/jquery.timepicker.js"></script>
     <script type="text/javascript" src="/js/datepair.js"></script>
@@ -86,7 +89,7 @@
         var oldFirst = null;
         var oldEnd = null;
 
-        $('#dateInput').on('rangeSelected', function() {
+        $('#dateInput').on('rangeSelected', function () {
 
             var startDate = $("#startDate").val();
             var endDate = $("#endDate").val();
@@ -96,13 +99,13 @@
             oldEnd = endDate;
 
             $.ajax({
-                    type: 'GET',
-                    url: host + '/date',
-                    data: {startDate: startDate, endDate: endDate},
-                    success: function (msg) {
-                        $('#eventsExampleStatus').text(msg);
-                    }
-                });
+                type: 'GET',
+                url: host + '/date',
+                data: {startDate: startDate, endDate: endDate},
+                success: function (msg) {
+                    $('#eventsExampleStatus').text(msg);
+                }
+            });
 
             inProgress = false;
 
@@ -110,20 +113,20 @@
         });
 
 
-        jQuery( document ).ready( function( $ ) {
+        jQuery(document).ready(function ($) {
 
 
             $("#carousel").owlCarousel({
-                singleItem : true,
+                singleItem: true,
                 rewindNav: false
             });
 
             var owl = $("#carousel");
 
-            $(".next").click(function(){
+            $(".next").click(function () {
                 owl.trigger('owl.next');
             })
-            $(".prev").click(function(){
+            $(".prev").click(function () {
                 owl.trigger('owl.prev');
             })
 
@@ -145,9 +148,20 @@
     <script type="text/javascript">
         {{--loading animation--}}
         $(document).ready(function () {
-            setTimeout(function(){$('body').addClass('loaded');},1000)
+            setTimeout(function () {
+                $('body').addClass('loaded');
+            }, 1000)
         });
 
+    </script>
+    <script type="text/javascript">
+        $('searchBox').autocomplete({
+            serviceUrl: '/suggestions',
+            onSelect: function (suggestion) {
+                alert(suggestion.value);
+            }
+
+        });
     </script>
 
 @stop

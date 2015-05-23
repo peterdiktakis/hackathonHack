@@ -74,7 +74,11 @@
     width: 100%;
     height: 100%;
     z-index: 1000;
+    -webkit-animation: all .35s linear;
+    -o-animation: all .35s linear;
+    animation: all .35s linear;
 }
+
 .loader {
     display: block;
     position: relative;
@@ -94,11 +98,11 @@
 
 .loader:before {
     content: "";
-    position:absolute;
-    top:5px;
-    left:5px;
-    right:5px;
-    bottom:5px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
     border-radius: 50%;
     border: 3px solid transparent;
     border-top-color: #e74c3c;
@@ -106,13 +110,14 @@
     -o-animation: spin linear 3s infinite;
     animation: spin linear 3s infinite;
 }
+
 .loader:after {
     content: "";
-    position:absolute;
-    top:15px;
-    left:15px;
-    right:15px;
-    bottom:15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
     border-radius: 50%;
     border: 3px solid transparent;
     border-top-color: #f9c922;
@@ -132,39 +137,82 @@
 }
 
 .loaded .loader {
-    opacity:0;
+    opacity: 0;
     -webkit-animation: all .3s .3s ease-in-out;
     -o-animation: all .3s .3s ease-in-out;
     animation: all .3s .3s ease-in-out;
 
 }
-.loaded .loader-wrapper{
-    visibility :hidden;
+
+.loaded .loader-wrapper {
+    visibility: hidden;
+    opacity: 0;
 }
+
 @-webkit-keyframes spin {
-    0%   {
-        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(0deg);  /* IE 9 */
-        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    0% {
+        -webkit-transform: rotate(0deg); /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg); /* IE 9 */
+        transform: rotate(0deg); /* Firefox 16+, IE 10+, Opera */
     }
     100% {
-        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(360deg);  /* IE 9 */
-        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
-    }
-}
-@keyframes spin {
-    0%   {
-        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(0deg);  /* IE 9 */
-        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
-    }
-    100% {
-        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(360deg);  /* IE 9 */
-        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: rotate(360deg); /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg); /* IE 9 */
+        transform: rotate(360deg); /* Firefox 16+, IE 10+, Opera */
     }
 }
 
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg); /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg); /* IE 9 */
+        transform: rotate(0deg); /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg); /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg); /* IE 9 */
+        transform: rotate(360deg); /* Firefox 16+, IE 10+, Opera */
+    }
+}
 
 /*END LOADING ANIMATION*/
+
+/*DATEPICKER*/
+.datepicker.dropdown-menu {
+    border-radius: 0;
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    opacity: .9;
+}
+
+.datepicker.dropdown-menu table tr td.active,
+.datepicker.dropdown-menu table tr td.active:hover,
+.datepicker.dropdown-menu table tr td span.active,
+.datepicker.dropdown-menu table tr td span.active:hover {
+    background: #2c3e50;
+
+}
+
+.datepicker.dropdown-menu table tr td,
+.datepicker.dropdown-menu table tr th,
+.datepicker.dropdown-menu table tr td span {
+    border-radius: 0;
+}
+
+
+/*END DATEPICKER*/
+
+/*AUTOCOMPLETE*/
+
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; cursor: default; overflow: auto; -webkit-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); -moz-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-no-suggestion { padding: 2px 5px;}
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: bold; color: #000; }
+.autocomplete-group { padding: 2px 5px; }
+.autocomplete-group strong { font-weight: bold; font-size: 16px; color: #000; display: block; border-bottom: 1px solid #000; }
+
+input { font-size: 28px; padding: 10px; border: 1px solid #CCC; display: block; margin: 20px 0; }
+
+
+/*END AUTOCOMPLETE

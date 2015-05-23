@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="735b75f9-52a5-418d-bffd-e2a43beeffba" name="Default" comment="added loading animation">
+    <list default="true" id="735b75f9-52a5-418d-bffd-e2a43beeffba" name="Default" comment="added autocomplete, not working yet though">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery.autocomplete.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery.mockjax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/landing.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/landing.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/noham.css" afterPath="$PROJECT_DIR$/public/css/noham.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/testNoham.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/testNoham.blade.php" />
@@ -33,19 +36,41 @@
       <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.653847" vertical-offset="34" max-vertical-offset="1275">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state vertical-scroll-proportion="21.961538" vertical-offset="758" max-vertical-offset="1326">
+              <caret line="11" column="82" selection-start-line="11" selection-start-column="82" selection-end-line="11" selection-end-column="82" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="landing.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="landing.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/landing.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.153846" vertical-offset="1476" max-vertical-offset="2057">
-              <caret line="110" column="8" selection-start-line="110" selection-start-column="8" selection-end-line="110" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.058309037" vertical-offset="966" max-vertical-offset="2941">
+              <caret line="58" column="10" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Downloads/jQuery-Autocomplete-master/jQuery-Autocomplete-master/content/styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datepair.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/datepair.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="5678">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,8 +78,8 @@
       <file leaf-file-name="testNoham.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/testNoham.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8076925" vertical-offset="35" max-vertical-offset="510">
-              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="19" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="510">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -63,7 +88,7 @@
       <file leaf-file-name="owl.carousel.js" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Downloads/owl.carousel/owl-carousel/owl.carousel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.034483" vertical-offset="255" max-vertical-offset="25789">
+            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="25789">
               <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -75,7 +100,7 @@
       <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="918">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -85,25 +110,32 @@
       <file leaf-file-name="nico.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/nico.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="1717">
-              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2618">
+              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
               <folding>
-                <marker date="1432398047540" expanded="true" signature="695:757" placeholder="{...}" />
-                <marker date="1432398047540" expanded="true" signature="821:1374" placeholder="{...}" />
-                <marker date="1432398047540" expanded="true" signature="1027:1374" placeholder="{...}" />
-                <marker date="1432398047540" expanded="true" signature="1381:1416" placeholder="{...}" />
-                <marker date="1432398047540" expanded="true" signature="1445:1549" placeholder="{...}" />
-                <marker date="1432398047540" expanded="true" signature="1556:1561" placeholder="{...}" />
+                <marker date="1432403348350" expanded="true" signature="139:421" placeholder="{...}" />
+                <marker date="1432403348350" expanded="true" signature="2905:2932" placeholder="{...}" />
+                <marker date="1432403348350" expanded="true" signature="2980:3000" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="noham.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="noham.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/noham.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3316583" vertical-offset="633" max-vertical-offset="2975">
-              <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3375" max-vertical-offset="3791">
+              <caret line="214" column="95" selection-start-line="214" selection-start-column="95" selection-end-line="214" selection-end-column="95" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.mockjax.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/jquery.mockjax.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10098">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -123,11 +155,12 @@
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/about.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
         <option value="$PROJECT_DIR$/public/css/nico.css" />
         <option value="$PROJECT_DIR$/resources/assets/less/app.less" />
-        <option value="$PROJECT_DIR$/public/css/noham.css" />
         <option value="$PROJECT_DIR$/resources/views/pages/testNoham.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/jquery.mockjax.js" />
+        <option value="$PROJECT_DIR$/public/css/noham.css" />
         <option value="$PROJECT_DIR$/resources/views/pages/landing.blade.php" />
       </list>
     </option>
@@ -471,9 +504,8 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="false" />
             <option name="myId" value="UPDATED" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/app/Http/routes.php</PATH>
             <PATH vcs="Git" revision="">$PROJECT_DIR$/public/css/nico.css</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/app.blade.php</PATH>
             <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/pages/landing.blade.php</PATH>
           </FILE-GROUP>
           <FILE-GROUP>
@@ -482,15 +514,9 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="false" />
             <option name="myId" value="CREATED" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/css/bootstrap-datepicker.css</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/images/cursor.png</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/js/bootstrap-datepicker.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/js/datepair.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/js/datepair.min.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/js/jquery.datepair.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/js/jquery.datepair.min.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/js/jquery.timepicker.js</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/app/Http/Controllers/SessionController.php</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/images/arrow.png</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/public/images/arrow_shadow.png</PATH>
           </FILE-GROUP>
           <FILE-GROUP>
             <option name="myUpdateName" value="Deleted" />
@@ -595,6 +621,9 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -602,9 +631,6 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -692,61 +718,18 @@
     </option>
     <MESSAGE value="piter need help" />
     <MESSAGE value="css test" />
-    <MESSAGE value="added loading animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="added loading animation" />
+    <MESSAGE value="added autocomplete, not working yet though" />
+    <option name="LAST_COMMIT_MESSAGE" value="added autocomplete, not working yet though" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/assets/less/app.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/nico.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="170">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding>
-            <marker date="1432398047540" expanded="true" signature="695:757" placeholder="{...}" />
-            <marker date="1432398047540" expanded="true" signature="821:1374" placeholder="{...}" />
-            <marker date="1432398047540" expanded="true" signature="1027:1374" placeholder="{...}" />
-            <marker date="1432398047540" expanded="true" signature="1381:1416" placeholder="{...}" />
-            <marker date="1432398047540" expanded="true" signature="1445:1549" placeholder="{...}" />
-            <marker date="1432398047540" expanded="true" signature="1556:1561" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/app.css.map">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="106080">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -770,7 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="391">
           <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -795,12 +777,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="170">
           <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding>
-            <marker date="1432398047540" expanded="true" signature="695:757" placeholder="{...}" />
-            <marker date="1432398047540" expanded="true" signature="821:1374" placeholder="{...}" />
-            <marker date="1432398047540" expanded="true" signature="1027:1374" placeholder="{...}" />
-            <marker date="1432398047540" expanded="true" signature="1381:1416" placeholder="{...}" />
-            <marker date="1432398047540" expanded="true" signature="1445:1549" placeholder="{...}" />
-            <marker date="1432398047540" expanded="true" signature="1556:1561" placeholder="{...}" />
+            <marker date="1432403348350" expanded="true" signature="139:421" placeholder="{...}" />
+            <marker date="1432403348350" expanded="true" signature="2905:2932" placeholder="{...}" />
+            <marker date="1432403348350" expanded="true" signature="2980:3000" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -809,7 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="sourcemapFileViewerProvider">
@@ -820,7 +798,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="106080">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -857,7 +834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -894,7 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -931,7 +906,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -968,7 +942,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1026,7 +999,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="391">
           <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1042,7 +1014,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="sourcemapFileViewerProvider">
@@ -1057,24 +1028,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/nico.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="1717">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding>
-            <marker date="1432398047540" expanded="true" signature="695:757" placeholder="{...}" />
-            <marker date="1432398047540" expanded="true" signature="821:1374" placeholder="{...}" />
-            <marker date="1432398047540" expanded="true" signature="1027:1374" placeholder="{...}" />
-            <marker date="1432398047540" expanded="true" signature="1381:1416" placeholder="{...}" />
-            <marker date="1432398047540" expanded="true" signature="1445:1549" placeholder="{...}" />
-            <marker date="1432398047540" expanded="true" signature="1556:1561" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/owl.carousel/owl-carousel/owl.carousel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.034483" vertical-offset="255" max-vertical-offset="25789">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="25789">
           <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -1086,38 +1042,83 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.207071" vertical-offset="2703" max-vertical-offset="106080">
           <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/testNoham.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="510">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.653847" vertical-offset="34" max-vertical-offset="1326">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state vertical-scroll-proportion="21.961538" vertical-offset="758" max-vertical-offset="1326">
+          <caret line="11" column="82" selection-start-line="11" selection-start-column="82" selection-end-line="11" selection-end-column="82" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/testNoham.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/css/nico.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8076925" vertical-offset="35" max-vertical-offset="510">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="19" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2618">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding>
+            <marker date="1432403348350" expanded="true" signature="139:421" placeholder="{...}" />
+            <marker date="1432403348350" expanded="true" signature="2905:2932" placeholder="{...}" />
+            <marker date="1432403348350" expanded="true" signature="2980:3000" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/datepair.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="5678">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/jquery.autocomplete.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="16575">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/landing.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/js/jquery.mockjax.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.153846" vertical-offset="1476" max-vertical-offset="2057">
-          <caret line="110" column="8" selection-start-line="110" selection-start-column="8" selection-end-line="110" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10098">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/jQuery-Autocomplete-master/jQuery-Autocomplete-master/content/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/noham.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3316583" vertical-offset="633" max-vertical-offset="2975">
-          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3375" max-vertical-offset="3791">
+          <caret line="214" column="95" selection-start-line="214" selection-start-column="95" selection-end-line="214" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/landing.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.058309037" vertical-offset="966" max-vertical-offset="2941">
+          <caret line="58" column="10" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
           <folding />
         </state>
       </provider>
