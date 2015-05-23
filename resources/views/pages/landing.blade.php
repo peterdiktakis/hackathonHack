@@ -1,5 +1,7 @@
 @extends('app')
-
+@section('title')
+    Rolling in the Voodoo
+@stop
 @section('content')
 <div class="container">
 	<div class="row">
