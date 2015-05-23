@@ -144,5 +144,27 @@ body {
     left: 20px;
 }
 
+.hack {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    opacity: .6;
+}
 
+img{
+    width: 200px;
+}
 
+.footer{
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 40px;
+    width: 100%;
+    color: #fff;
+}
+
+.footer p{
+    margin-top: 10px;
+    opacity: 0.4;
+}

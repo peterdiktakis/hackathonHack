@@ -10,6 +10,9 @@
     <div class="name">
         <h1>&#47;&#47;Hack</h1>
     </div>
+    <div class="hack">
+        <img src="/images/hackathon.png" alt="hackathon"/>
+    </div>
     <div class="page">
         <div class="col-md-12">
             <div id="carousel" class="owl-carousel">
@@ -51,11 +54,22 @@
             <div class="arrow arrow-left prev">
 
             </div>
-            <div class="arrow arrow-right next">
+        </div>
+    </div>
+<div class="navigation">
+    <div class="arrow arrow-left prev"></div>
+    <div class="arrow arrow-right next"></div>
+</div>
 
 
             </div>
         </div>
+    </div>
+@stop
+
+@section('footer')
+    <div class="footer">
+        <p class="text-center">2015 Expedia Hackathon Team //Hack</p>
     </div>
 @stop
 
@@ -138,7 +152,7 @@
                     url: host + '/suggestions',
                     data: {location: searchText},
                     success: function (msg) {
-                        $('#cities').text(msg);
+
                     }
                 });
             });
