@@ -26,14 +26,14 @@
                     </div>
                     <div class="carousel-item">
                         <div id ='cities'>
-                            <p id="dateInput">
+                            <p id="dateInput" class="text-center">
                                 <input type="text" id="startDate" class="date start" placeholder="Check in"/>
                                 <input type="text" class="date end" placeholder="Check out"/>
                             </p>
                             <div id ='cities'>
 
                             </div>
-                            <h2 id ='eventsExampleStatus'>test</h2>
+                            <h2 class="text-center" id ='eventsExampleStatus'>Pick up a date bitch !</h2>
 
                         </div>
                     </div>
