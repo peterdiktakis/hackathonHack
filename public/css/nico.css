@@ -9,10 +9,25 @@ h1,h2,h3,h4,h5,h6 {
     letter-spacing: 0.1em;
     font-variant: small-caps;
     color: #ffffff;
-    padding: 5px;
+    padding: 10px;
+    font-weight: 100;
+    font-size: 20px;
     background-color: transparent;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    -ms-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
 }
 
+.btn-default:hover{
+    background-color: #fff;
+    color: #7d6587;
+}
+
+#searchbox{
+    
+}
 
 
 .section {
