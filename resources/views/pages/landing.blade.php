@@ -12,7 +12,7 @@
                     {!! Form::text('location', null, ['id' => 'searchBox', 'class' => 'form-control']) !!}
                 </div>
                 <div class="form-group col-xs-2">
-                    {!! Form::submit('Search', ['name' => 'submit', 'class' => 'btn btn-primary form-control']) !!}
+                    {!! Form::submit('Search', ['name' => 'submit', 'class' => 'btn-default']) !!}
                 </div>
             {!! Form::close() !!}
 

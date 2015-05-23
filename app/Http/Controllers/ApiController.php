@@ -10,13 +10,17 @@ class ApiController extends Controller {
 	public function suggestions()
     {
         $location = Request::get('location');
-        $helper = ApiHelper::getInstance();
-        return $helper->getCities($location);
+        if ($location) {
+            $helper = ApiHelper::getInstance();
+            return $helper->getCities($location);
+        } else {
+            return null;
+        }
     }
 
     public function todo()
     {
-        
+
     }
 
 
