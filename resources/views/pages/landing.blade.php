@@ -169,13 +169,37 @@
 
     </script>
     <script type="text/javascript">
-        $('searchBox').autocomplete({
-            serviceUrl: '/suggestions',
-            onSelect: function (suggestion) {
-                alert(suggestion.value);
-            }
+        var delay = (function(){
+            var timer = 0;
+            return function(callback, ms){
+                clearTimeout (timer);
+                timer = setTimeout(callback, ms);
+            };
+        })();
 
-        });
+            $('#searchBox').autocomplete({
+                lookup: function (query, done) {
+                    // Do ajax call or lookup locally, when done,
+                    // call the callback and pass your results:
+                    var searchText = $('#searchBox').val();
+                    var result = null;
+                    delay(function(){
+                        $.ajax({
+                            type: 'GET',
+                            url: host + '/suggestions',
+                            data: {location: searchText},
+                            success: function (msg) {
+                                done(msg);
+                            }
+                        });
+
+                    }, 400 );
+                },
+                onSelect: function (suggestion) {
+                    alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+                }
+            });
+
     </script>
 
 @stop

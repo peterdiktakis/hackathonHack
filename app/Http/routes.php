@@ -15,11 +15,12 @@ Route::get('/', 'PagesController@landing');
 
 Route::get('home', 'HomeController@index');
 Route::get('about', 'PagesController@about');
-Route::get('activity/', 'PagesController@activity');
+Route::get('activity', 'PagesController@activity');
 
 Route::get('suggestions', 'ApiController@suggestions');
 Route::get('date', 'SessionController@date');
-Route::get('todo', 'ApiController@todo');
+Route::get('hotel', 'ApiController@hotel');
+Route::get('activities', 'ApiController@activities');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

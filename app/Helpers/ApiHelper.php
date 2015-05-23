@@ -43,23 +43,41 @@ class ApiHelper {
                         'apikey' => $this->publicKey]
                          ]);
         $locations = $response->json();
-
-        $cities = array();
+        $cities = array('suggestions' => array());
         foreach($locations as $location) {
-            $cities[] = $location['name'];
+            $cities['suggestions'][] = array("value" => $location['name'], 'data' => $location['id']);
         }
+
+//        $in = array(
+//            "suggestions" => array(
+//                array("value" => "one", "data" => "ON"),
+//                array("value" => "two", "data" => "TW"),
+//                array("value" => "three", "data" => "TH"),
+//                array("value" => "four", "data" => "FO"),
+//            )
+//
+//        );
 
         return $cities;
     }
 
-    public function getToDo($location)
+    public function getHotels($startDate, $endDate, $location)
     {
-        $response = $this->client->get('http://terminal2.expedia.com/x/activities/search?', [
-            'query' => [
-                'location' => $location,
-                'apikey' => $this->publicKey]
-        ]);
 
-        return $response->json();
+    }
+
+    public function getActivities($startDate, $endDate, $location)
+    {
+        if ($startDate && $endDate) {
+            $query = ['query' => ['location' => $location, 'startDate' => $startDate, 'endDate' => $endDate, 'apikey' => $this->publicKey]];
+        } else {
+            if ($location) {
+                $query = ['query' => ['location' => $location, 'apikey' => $this->publicKey]];
+            }
+        }
+        if ($query) {
+            $response = $this->client->get('http://terminal2.expedia.com/x/activities/search?', $query);
+            return $response->json();
+        }
     }
 }

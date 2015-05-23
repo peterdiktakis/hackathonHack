@@ -12,8 +12,7 @@ class SessionController extends Controller {
     {
         $startDate = Request::get('startDate');
         $endDate = Request::get('endDate');
-
-        Session::put('startEnd', $startDate);
+        Session::put('startDate', $startDate);
         Session::put('endDate', $endDate);
         return array($startDate, $endDate);
     }
