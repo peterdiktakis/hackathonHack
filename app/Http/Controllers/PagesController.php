@@ -1,8 +1,8 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 use GuzzleHttp\Client;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Helpers\GeoHelper;
 
@@ -10,12 +10,15 @@ class PagesController extends Controller {
 
     public function about()
     {
-        $key = 'wpZa7emWeoA9fG6xP6FIbxMKoNvlAjZE';
-        $client = new Client();
-        $geo = 'http://terminal2.expedia.com/x/geo/features?ln.op=cn&ln.value=San Francisco&type=region&apikey=';
-        $response = $client->get($geo . $key);
+        $helper = GeoHelper::getInstance();
+        dd($helper->get('Montreal'));
 
-        dd($response->json());
+//        $key = 'wpZa7emWeoA9fG6xP6FIbxMKoNvlAjZE';
+//        $client = new Client();
+//        $geo = 'http://terminal2.expedia.com/x/geo/features?ln.op=cn&ln.value=San Francisco&type=region&apikey=';
+//        $response = $client->get($geo . $key);
+//
+//        dd($response->json());
      //   return view('pages.about');
     }
 
