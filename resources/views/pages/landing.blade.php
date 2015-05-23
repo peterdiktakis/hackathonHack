@@ -7,8 +7,6 @@
     <div class="page">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-
-
                 <div id="carousel" class="owl-carousel">
                     <div class="carousel-item">
                         <h1 class='text-center'>Welcome to our Travel App</h1>
@@ -38,6 +36,11 @@
 @stop
 
 @section('page-script')
+
+    <link rel="stylesheet" href="/owl.carousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="/owl.carousel/owl-carousel/owl.theme.css">
+    <script src="/owl.carousel/assets/js/jquery-1.9.1.min.js"></script>
+    <script src="/owl.carousel/owl-carousel/owl.carousel.js"></script>
     <script type="text/javascript">
 
 
@@ -45,6 +48,10 @@
         var host = "{{URL::to('/')}}";
         jQuery( document ).ready( function( $ ) {
 
+
+            $("#carousel").owlCarousel({
+                items : 1,
+            });
 
             $('#searchForm').on('submit', function (e) {
                 e.preventDefault();
@@ -62,11 +69,4 @@
 
     </script>
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-
-            $("#carousel").owlCarousel();
-
-        });
-    </script>
 @stop
