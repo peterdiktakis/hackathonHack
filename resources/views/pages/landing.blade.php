@@ -28,8 +28,9 @@
                         <div id ='cities'>
                             <p id="dateInput" class="text-center">
                                 <input type="text" id="startDate" class="date start" placeholder="Check in"/>
-                                <input type="text" class="date end" placeholder="Check out"/>
+                                <input type="text" id="endDate" class="date end" placeholder="Check out"/>
                             </p>
+
                             <div id ='cities'>
 
                             </div>
@@ -57,12 +58,11 @@
 
     <script type="text/javascript" src="/js/jquery.timepicker.js"></script>
     <script type="text/javascript" src="/js/datepair.js"></script>
-
-
     <script type="text/javascript">
+        var host = "{{URL::to('/')}}";
 
         $('#dateInput .date').datepicker({
-            'format': 'm/d/yyyy',
+            'format': 'yyyy-mm-dd',
             'autoclose': true
         });
 
@@ -72,12 +72,34 @@
         var datepair = new Datepair(basicExampleEl);
 
         // some sample handlers
+        var inProgress = false;
+        var oldFirst = null;
+        var oldEnd = null;
+
         $('#dateInput').on('rangeSelected', function() {
-            $('#eventsExampleStatus').text($("#startDate").val());
+
+            var startDate = $("#startDate").val();
+            var endDate = $("#endDate").val();
+            // so it's not called three times.
+            if (startDate == oldFirst && endDate == oldEnd) return;
+            oldFirst = startDate;
+            oldEnd = endDate;
+
+            $.ajax({
+                    type: 'GET',
+                    url: host + '/date',
+                    data: {startDate: startDate, endDate: endDate},
+                    success: function (msg) {
+                        $('#eventsExampleStatus').text(msg);
+                    }
+                });
+
+            inProgress = false;
+
+
         });
 
 
-        var host = "{{URL::to('/')}}";
         jQuery( document ).ready( function( $ ) {
 
 

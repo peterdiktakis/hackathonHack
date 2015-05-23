@@ -18,6 +18,7 @@ Route::get('about', 'PagesController@about');
 Route::get('activity/', 'PagesController@activity');
 
 Route::get('suggestions', 'ApiController@suggestions');
+Route::get('date', 'SessionController@date');
 Route::get('todo', 'ApiController@todo');
 
 Route::controllers([
