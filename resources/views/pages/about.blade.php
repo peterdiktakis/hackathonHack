@@ -6,6 +6,8 @@
 
         <p>Hackathon 2015 Mo Fuckers</p>
 
+        <div>I JOIN THE BATTLE</div>
+
     </div>
 
 @stop
