@@ -42,7 +42,21 @@
                         <div id='cities'>
 
                         </div>
-                        <h2 class="text-center" id='eventsExampleStatus'>Pick up a date bitch !</h2>
+                        <h2 class="text-center" id='eventsExampleStatus'>Pick up a date bitch!</h2>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div id='activities' class="text-center">
+
+
+                        <h1 class="text-center">Choose an activity!</h1>
+                        <select class="select-activity">
+                            <option value="bar">Bar</option>
+                            <option value="restaurant" selected>Restaurant</option>
+                            <option value="family">Family trip</option>
+
+                        </select>
 
                     </div>
                 </div>
