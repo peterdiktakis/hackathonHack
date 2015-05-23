@@ -18,6 +18,11 @@ class PagesController extends Controller {
         return view('pages.landing');
     }
 
+    public function activity()
+    {
+        return view('pages.activity');
+    }
+
 	/**
 	 * Display a listing of the resource.
 	 *

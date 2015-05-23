@@ -15,8 +15,10 @@ Route::get('/', 'PagesController@landing');
 
 Route::get('home', 'HomeController@index');
 Route::get('about', 'PagesController@about');
+Route::get('activity/', 'PagesController@activity');
 
 Route::get('suggestions', 'ApiController@suggestions');
+Route::get('todo', 'ApiController@todo');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
