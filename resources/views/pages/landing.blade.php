@@ -3,12 +3,14 @@
     //Hack Faster
 @stop
 @section('content')
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+        <div class="loader-overlay"></div>
+    </div>
     <div class="name">
         <h1>&#47;&#47;Hack</h1>
     </div>
-    <div class="page">
-        <div class="row">
-            <div class="col-md-12">
+    <div class="page"><div class="col-md-12">
                 <div id="carousel" class="owl-carousel">
                     <div class="carousel-item">
                         <h1 class='text-center'>Welcome to our Travel App</h1>
@@ -40,8 +42,7 @@
                     </div>
                 </div>
 
-            </div>
-        </div>
+            
     </div>
 
 @stop
@@ -119,6 +120,13 @@
                     }
                 });
             });
+        });
+
+    </script>
+    <script type="text/javascript">
+        {{--loading animation--}}
+        $(document).ready(function () {
+            setTimeout(function(){$('body').addClass('loaded');},1000)
         });
 
     </script>
