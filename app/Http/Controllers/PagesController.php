@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+use App\Helpers\GeoHelper;
 
 class PagesController extends Controller {
 
@@ -11,7 +12,9 @@ class PagesController extends Controller {
     {
         $key = 'wpZa7emWeoA9fG6xP6FIbxMKoNvlAjZE';
         $client = new Client();
-        $response = $client->get("http://terminal2.expedia.com/x/hotels?location=47.6063889,-122.3308333&radius=5km&dates=2015-06-19,2015-06-22&apikey=" . $key);
+        $geo = 'http://terminal2.expedia.com/x/geo/features?ln.op=cn&ln.value=San Francisco&type=region&apikey=';
+        $response = $client->get($geo . $key);
+
         dd($response->json());
      //   return view('pages.about');
     }
