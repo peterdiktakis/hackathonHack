@@ -1,10 +1,25 @@
 @extends('app')
 
 @section('content')
-
-    <div style="background: #000; padding:200px;">
-        <button class="btn btn-outline oswald" style="font-weight: bold">submit</button>
-
-
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+        <div class="loader-overlay"></div>
     </div>
+
+
+@section('page-script')
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            setTimeout(function(){$('body').addClass('loaded');},1000)
+
+
+
+        });
+
+
+    </script>
+@stop
 @stop

@@ -3,6 +3,10 @@
     //Hack Faster
 @stop
 @section('content')
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+        <div class="loader-overlay"></div>
+    </div>
     <div class="name">
         <h1>&#47;&#47;Hack</h1>
     </div>
@@ -97,6 +101,13 @@
                     }
                 });
             });
+        });
+
+    </script>
+    <script type="text/javascript">
+        {{--loading animation--}}
+        $(document).ready(function () {
+            setTimeout(function(){$('body').addClass('loaded');},1000)
         });
 
     </script>
