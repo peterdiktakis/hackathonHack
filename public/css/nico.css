@@ -5,13 +5,13 @@ h1,h2,h3,h4,h5,h6 {
 
 
 .btn-default {
-    border: 1px solid white;
+    border: 2px solid white;
     letter-spacing: 0.1em;
     font-variant: small-caps;
     color: #ffffff;
-    padding: 10px;
+    padding: 10px 20px;
     font-weight: 100;
-    font-size: 20px;
+    font-size: 13px;
     background-color: transparent;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
@@ -23,12 +23,16 @@ h1,h2,h3,h4,h5,h6 {
 .btn-default:hover{
     background-color: #fff;
     color: #7d6587;
+    border-color: #ffffff;
 }
 
-#searchbox{
-    
+#searchBox{
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 0;
+    height: 40px;
+    color: #ffffff;
 }
-
 
 .section {
     background-color: #fff;
@@ -38,4 +42,13 @@ h1,h2,h3,h4,h5,h6 {
 
 body {
     background-image: url("../images/background.jpg");
+}
+
+.search{
+    margin-top: 50px;
+    
+}
+
+.page {
+    margin-top: 150px;
 }

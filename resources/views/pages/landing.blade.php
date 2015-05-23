@@ -4,27 +4,28 @@
 @stop
 @section('content')
 <div class="container">
-    <div class="search">
-	<div class="row">
-		<div class="col-md-10 col-md-offset-1">
-			<h1 class='text-center'>Welcome to our Travel App</h1>
-            <h3 class='text-center'>Travel deep into the Voodoo !</h3>
+    <div class="page">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h1 class='text-center'>Welcome to our Travel App</h1>
+                <h3 class='text-center'>Travel deep into the Voodoo !</h3>
 
-            {!! Form::open(array('method' => 'get', 'url' => 'test', 'id' => 'searchForm')) !!}
-                <div class="form-group col-xs-10">
-                    {!! Form::text('location', null, ['id' => 'searchBox', 'class' => 'form-control']) !!}
-                </div>
-                <div class="form-group col-xs-2">
-                    {!! Form::submit('Search', ['name' => 'submit', 'class' => 'btn-default']) !!}
-                </div>
-            {!! Form::close() !!}
+                <div class="search"
+                {!! Form::open(array('method' => 'get', 'url' => 'test', 'id' => 'searchForm')) !!}
+                    <div class="form-group col-xs-10">
+                        {!! Form::text('location', null, ['id' => 'searchBox', 'class' => 'form-control']) !!}
+                    </div>
+                    <div class="form-group col-xs-2">
+                        {!! Form::submit('Search', ['name' => 'submit', 'class' => 'btn-default']) !!}
+                    </div>
+                {!! Form::close() !!}
 
-            <div id ='cities'>
+                <div id ='cities'>
+
+                </div>
 
             </div>
-
         </div>
-	</div>
     </div>
 </div>
 @stop
