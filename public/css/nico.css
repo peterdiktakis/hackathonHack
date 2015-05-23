@@ -1,3 +1,7 @@
+*{
+    cursor:url('../images/cursor_j.png'), pointer;
+}
+
 h1,h2,h3,h4,h5,h6 {
     color: #ffffff;
     font-weight: 100;
@@ -9,9 +13,9 @@ h1,h2,h3,h4,h5,h6 {
     letter-spacing: 0.1em;
     font-variant: small-caps;
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 5px 15px;
     font-weight: 100;
-    font-size: 13px;
+    font-size: 18px;
     background-color: transparent;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
@@ -19,6 +23,7 @@ h1,h2,h3,h4,h5,h6 {
     -o-transition: all .35s;
     transition: all .35s;
     outline:none;
+    height: 40px;
 }
 
 .btn-default:hover{
