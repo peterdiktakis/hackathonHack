@@ -104,7 +104,7 @@ body {
 }
 
 .page {
-    margin-top: 200px;
+    margin-top: 10%;
 }
 
 .owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {
