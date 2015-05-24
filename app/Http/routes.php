@@ -30,3 +30,5 @@ Route::controllers([
 ]);
 
 Route::get('testNoham', 'PagesController@testNoham');
+
+Route::get('maps', 'PagesController@testMaps');

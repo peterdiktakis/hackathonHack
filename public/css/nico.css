@@ -17,7 +17,7 @@ input[type="text"] {
     font-variant: small-caps;
     letter-spacing: 0.1em;
     font-size: 20px;
-    
+
 }
 
 input[type="text"]:focus{
@@ -105,7 +105,7 @@ body {
 
 .search{
     margin-top: 50px;
-    
+
 }
 
 .owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {
@@ -228,10 +228,8 @@ color: #000000;
 
 .map{
     height: 400px;
-    width: 127%;
+    width: 100%;
     background-color: rgba(0,0,0,.6);
-    margin-left: -150px;
-    background-image: url('../images/map_fake.png');
     -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.85) ;
     -moz-box-shadow:    0px 0px 30px 0px rgba(0, 0, 0, 0.85);
     box-shadow:         0px 0px 30px 0px rgba(0, 0, 0, 0.85);

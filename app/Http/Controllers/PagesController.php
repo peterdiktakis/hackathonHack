@@ -97,4 +97,9 @@ class PagesController extends Controller
         return view("pages.testNoham");
     }
 
+    public function testMaps()
+    {
+      return view('pages.mapstest');
+    }
+
 }
