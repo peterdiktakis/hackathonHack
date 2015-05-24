@@ -40,7 +40,7 @@ class SessionController extends Controller {
 //                $helper = YelpHelper::getInstance();
 //                echo($helper->search('restaurant', $locationName, $latitude . ',' . $longitude));
 
-            }
-    }
+		}
+	}
 
 }
