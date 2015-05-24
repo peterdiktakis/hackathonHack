@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/owl.carousel/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="/owl.carousel/owl-carousel/owl.theme.css">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="{{ asset('/css/nico.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/noham.css') }}" rel="stylesheet">
 

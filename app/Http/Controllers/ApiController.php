@@ -31,8 +31,9 @@ class ApiController extends Controller {
 
         if ($location) {
             $helper = ApiHelper::getInstance();
-            $response = $helper->getHotels($startDate, $endDate, $location, '5km');
-            return dd($response);
+            $responses = $helper->getHotels($startDate, $endDate, $location, '5km');
+            return view('pages.results',compact('responses'));
+            //return dd($responses);
         }
     }
 

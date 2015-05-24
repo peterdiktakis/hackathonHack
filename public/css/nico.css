@@ -95,6 +95,7 @@ body {
     -o-background-size: cover;
     -webkit-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
     cursor:url('../images/cursor.png'), pointer;
 }
 
@@ -206,4 +207,18 @@ html, body {
     width: 20px;
     height: 20px;
     display: inline-block;
+}
+
+.section {
+    cursor:url('../images/cursor_black.png'), default;
+    margin: 20px auto 60px auto;
+    opacity: 0.9;
+}
+
+.results-page .section h4 {
+color: #000000;
+}
+
+.results-page .section h6 {
+    color: #000000;
 }
