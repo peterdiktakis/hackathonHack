@@ -20,43 +20,12 @@ function initialize() {
 
   var locations = {!! $geos !!};
 
-
-
   for (i = 0; i < locations.length; i++) {
 
-<<<<<<< HEAD
     var marker = new google.maps.Marker({
          position: new google.maps.LatLng(locations[i][2], locations[i][3]),
          map: map,
-         icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + locations[i][0] + '|FF0000|000000'
-=======
-    var contentString = 'hello';
-
-
-
-    var infowindow = new google.maps.InfoWindow({
-      content: contentString
-    });
-
-    marker = new google.maps.Marker({
-         position: new google.maps.LatLng(locations[i][0], locations[i][1]),
-         map: map
-    });
-
-    google.maps.event.addListener(marker, 'click', (function(marker, i) {
-         return function() {
-             infowindow.setContent(locations[i][0]);
-             infowindow.open(map, marker);
-         }
-    })(marker, i));
-
-    google.maps.event.addListener(marker, 'mouseover', function() {
-        infowindow.open(map, this);
-    });
-
-    google.maps.event.addListener(marker, 'mouseout', function() {
-        infowindow.close();
->>>>>>> origin/master
+         icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + locations[i][0] + '|FFFFFF|000000'
     });
 }
 
