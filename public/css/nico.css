@@ -211,8 +211,11 @@ html, body {
 
 .section {
     cursor:url('../images/cursor_black.png'), default;
-    margin: 20px auto 60px auto;
+    margin: 20px auto 40px auto;
     opacity: 0.9;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.85) ;
+    -moz-box-shadow:    0px 0px 20px 0px rgba(0, 0, 0, 0.85);
+    box-shadow:         0px 0px 20px 0px rgba(0, 0, 0, 0.85);
 }
 
 .results-page .section h4 {
@@ -222,3 +225,63 @@ color: #000000;
 .results-page .section h6 {
     color: #000000;
 }
+
+.map{
+    height: 400px;
+    width: 127%;
+    background-color: rgba(0,0,0,.6);
+    margin-left: -150px;
+    background-image: url('../images/map_fake.png');
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.85) ;
+    -moz-box-shadow:    0px 0px 30px 0px rgba(0, 0, 0, 0.85);
+    box-shadow:         0px 0px 30px 0px rgba(0, 0, 0, 0.85);
+    margin-bottom: 30px;
+
+}
+
+.hotel-thumb{
+    display: inline-block;
+}
+.hotel-name{
+    display: inline-block;
+    margin-top: 0;
+}
+.hotel-location{
+    display: inline-block;
+}
+.hotel-description{
+    color: #999;
+}
+
+.hotel-rating {
+
+}
+
+.hotel-rating i{
+    color: #f1c40f;
+}
+
+.hotel-text-wrap{
+    margin-left: -10px;
+    margin-top: 2px;
+
+}
+
+.thumb-wrap {
+    margin-right: -15px;
+    margin-bottom: 10px;
+}
+
+.fancy-test{
+    border-top: 2px solid white ;
+    border-bottom: 2px solid white ;
+    margin-bottom: 30px;
+
+}
+
+.nb-result{
+    margin-top: 40px;
+}
+
+
+
