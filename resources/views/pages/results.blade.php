@@ -27,6 +27,15 @@ function initialize() {
          map: map,
          icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + locations[i][0] + '|FFFFFF|000000'
     });
+
+    marker.posId = locations[i][0];
+
+    google.maps.event.addListener(marker, 'click', function() {
+
+      $('html, body').animate({
+        scrollTop: $('#' + this.posId).offset().top
+      }, 1000);
+    });
 }
 
 }
@@ -130,6 +139,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
           {{--*/ $num++ /*--}}
 
           <div class="col-md-4 col-sm-6">
+            <a id="{{$num}}"></a>
             <div class="section match" @if (isset($hotel['DetailsUrl'])) onclick="location.href='{{$hotel['DetailsUrl']}}'" style="cursor: pointer" @endif>
 
 
