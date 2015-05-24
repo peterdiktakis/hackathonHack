@@ -24,23 +24,38 @@ class SessionController extends Controller {
 
     public function location()
     {
-			if (Request::ajax())
-			{
-				Session::forget('locationName');
-				Session::forget('longitude');
-				Session::forget('latitude');
+			if (Request::ajax()) {
+                Session::forget('locationName');
+                Session::forget('longitude');
+                Session::forget('latitude');
                 $locationName = Request::get('locationName');
                 $longitude = Request::get('longitude');
                 $latitude = Request::get('latitude');
 
                 Session::put('locationName', $locationName);
-				Session::put('longitude', $longitude);
-				Session::put('latitude', $latitude);
+                Session::put('longitude', $longitude);
+                Session::put('latitude', $latitude);
 
 //                $helper = YelpHelper::getInstance();
 //                echo($helper->search('restaurant', $locationName, $latitude . ',' . $longitude));
 
-		}
+            }
 	}
+    public function storeSelections()
+    {
+        if (Request::ajax()) {
+          // store users activity / business selections in session.
+            $activities = Request::get('activities');
+            $bars = Request::get('bars');
+            $restaurants = Request::get('restaurants');
+            Session::forget('activities');
+            Session::forget('bars');
+            Session::forget('restaurants');
+            Session::put('activities', $activities);
+            Session::put('bars', $bars);
+            Session::put('restaurants', $restaurants);
+            return true;
+        }
+    }
 
 }

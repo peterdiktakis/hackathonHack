@@ -12,10 +12,9 @@ class ApiController extends Controller {
 
     public function activities()
     {
-
         $startDate = Session::get('startDate');
         $endDate = Session::get('endDate');
-        $location = Session::get('location');
+        $location = Session::get('locationName');
         if ($location) {
             $helper = ApiHelper::getInstance();
             $results = $helper->getActivities($startDate, $endDate, $location);
