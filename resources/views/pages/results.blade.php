@@ -18,38 +18,23 @@ function initialize() {
   };
   var map=new google.maps.Map(document.getElementById("map"),mapProp);
 
-  var locations = {{ $geos }};
-
-
+  var locations = {!! $geos !!};
 
   for (i = 0; i < locations.length; i++) {
 
-    var contentString = 'hello';
-
-
-
-    var infowindow = new google.maps.InfoWindow({
-      content: contentString
+    var marker = new google.maps.Marker({
+         position: new google.maps.LatLng(locations[i][2], locations[i][3]),
+         map: map,
+         icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + locations[i][0] + '|FFFFFF|000000'
     });
 
-    marker = new google.maps.Marker({
-         position: new google.maps.LatLng(locations[i][0], locations[i][1]),
-         map: map
-    });
+    marker.posId = locations[i][0];
 
-    google.maps.event.addListener(marker, 'click', (function(marker, i) {
-         return function() {
-             infowindow.setContent(locations[i][0]);
-             infowindow.open(map, marker);
-         }
-    })(marker, i));
+    google.maps.event.addListener(marker, 'click', function() {
 
-    google.maps.event.addListener(marker, 'mouseover', function() {
-        infowindow.open(map, this);
-    });
-
-    google.maps.event.addListener(marker, 'mouseout', function() {
-        infowindow.close();
+      $('html, body').animate({
+        scrollTop: $('#' + this.posId).offset().top
+      }, 1000);
     });
 }
 
@@ -154,6 +139,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
           {{--*/ $num++ /*--}}
 
           <div class="col-md-4 col-sm-6">
+            <a id="{{$num}}"></a>
             <div class="section match" @if (isset($hotel['DetailsUrl'])) onclick="location.href='{{$hotel['DetailsUrl']}}'" style="cursor: pointer" @endif>
 
 

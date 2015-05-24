@@ -37,13 +37,15 @@ class ApiController extends Controller {
             $activities = null;
             $bars = null;
             if (Session::get('bars') != "") $bars = $this->yelp('bar');
-            if (Session::get('activities') != "") $activities = $helper->activities();
+            if (Session::get('activities') != "") $activities = $helper->getActivities($startDate, $endDate, Session::get('locationName'));
             if (Session::get('restaurants') != "") $restaurants = $this->yelp('restaurant');
 
 
             $geos = array();
+            $i = 0;
             foreach($responses['HotelInfoList']['HotelInfo'] as $hotel) {
-              $geos[] = [doubleval($hotel['Location']['GeoLocation']['Latitude']), doubleval($hotel['Location']['GeoLocation']['Longitude'])];
+              $i++;
+              $geos[] = [$i, $hotel['Name'], doubleval($hotel['Location']['GeoLocation']['Latitude']), doubleval($hotel['Location']['GeoLocation']['Longitude'])];
             }
 
             $geos = json_encode($geos);
