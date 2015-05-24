@@ -23,6 +23,7 @@ Route::get('location', 'SessionController@location');
 Route::get('hotel', 'ApiController@hotel');
 Route::get('activities', 'ApiController@activities');
 Route::get('yelp', 'ApiController@yelp');
+Route::get('storeSelections', 'SessionController@storeSelections');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

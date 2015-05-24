@@ -13,18 +13,41 @@ function initialize() {
 
   var mapProp = {
     center:neighbourhood,
-    zoom:13,
+    zoom:15,
     mapTypeId:google.maps.MapTypeId.ROADMAP
   };
   var map=new google.maps.Map(document.getElementById("map"),mapProp);
 
-  // var marker = new google.maps.Marker({
-  //     position: neighbourhood,
-  //     map: map,
-  //     title: 'Hello World!'
-  // });
+  var locations = {{ $geos }};
 
-  console.log(map);
+  for (i = 0; i < locations.length; i++) {
+
+    var contentString = 'hello';
+
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+    marker = new google.maps.Marker({
+         position: new google.maps.LatLng(locations[i][0], locations[i][1]),
+         map: map
+    });
+
+    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+         return function() {
+             infowindow.setContent(locations[i][0]);
+             infowindow.open(map, marker);
+         }
+    })(marker, i));
+
+    google.maps.event.addListener(marker, 'mouseover', function() {
+        infowindow.open(map, this);
+    });
+
+    google.maps.event.addListener(marker, 'mouseout', function() {
+        infowindow.close();
+    });
+}
 
 }
 google.maps.event.addDomListener(window, 'load', initialize);
@@ -125,10 +148,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
           @foreach ($responses['HotelInfoList']['HotelInfo'] as $hotel)
 
           {{--*/ $num++ /*--}}
-
-          <script type="text/javascript">
-            console.log($('#map'));
-          </script>
 
           <div class="col-md-4 col-sm-6">
             <div class="section match" @if (isset($hotel['DetailsUrl'])) onclick="location.href='{{$hotel['DetailsUrl']}}'" style="cursor: pointer" @endif>
