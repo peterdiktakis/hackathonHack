@@ -34,6 +34,17 @@
                         {!! Form::close() !!}
                     </div>
                 </div>
+
+                <div class="carousel-item">
+                    <h3>I hate JSON</h3>
+
+                    <div id='bars'>
+                        <p>in the div...</p>
+                    </div>
+                </div>
+
+
+
                 <div class="carousel-item">
                     <div id='cities'>
                         <h1 class="text-center" id='eventsExampleStatus'>Pick up a date</h1>
@@ -45,7 +56,7 @@
                         <div id='cities'>
 
                         </div>
-
+                        
 
 
                     </div>
@@ -192,6 +203,17 @@
     var owl = $("#carousel");
     var request;
 
+
+        function setUpYelp(json) {
+            var html = "";
+            for (var i in json.businesses) {
+                html += "<h4>" + json.businesses[i].name + "</h4>";
+            }
+
+            console.log(json.businesses)
+            $('#bars').html(html);
+        }
+
         var delay = (function () {
             var timer = 0;
             return function (callback, ms) {
@@ -224,7 +246,7 @@
                             }
                         });
 
-                    }, 400 );
+                    }, 400);
                 },
                 onSelect: function (suggestion) {
                     $.ajax({
@@ -232,28 +254,11 @@
                         url: host + '/location',
                         data: {locationName: suggestion.value, locationId: suggestion.data, latitude: suggestion.latitude, longitude: suggestion.longitude},
                         success: function (msg) {
-                          owl.trigger('owl.next');
-                        }
-                    });
-                }
-            }).keypress(function(e) {
-
-                if (e.keyCode === 13)
-                {
-                    var owl = $("#carousel");
-                    e.preventDefault();
-                    $.ajax({
-                        type: 'GET',
-                        url: host + '/location',
-                        data: {locationName: $('#searchBox').val()},
-                        success: function () {
                             owl.trigger('owl.next');
+                            setUpYelp(eval('(' + msg + ')'));
                         }
                     });
-                }
-
-            });
-
+            }});
     </script>
 
 @stop

@@ -6,6 +6,7 @@ use Request;
 use Response;
 use Illuminate\Support\Facades\Session;
 use App\Helpers\ApiHelper;
+use App\Helpers\YelpHelper;
 
 class ApiController extends Controller {
 
@@ -47,5 +48,15 @@ class ApiController extends Controller {
         } else {
             return null;
         }
+    }
+
+    public function yelp()
+    {
+        $helper = YelpHelper::getInstance();
+        $locationName = Session::get('locationName');
+        $longitude = Session::get('longitude');
+        $latitude = Session::get('latitude');
+        echo($latitude . ',' . $longitude);
+        dd(json_decode($helper->search('restaurant', $locationName, $latitude . ',' . $longitude)));
     }
 }

@@ -52,7 +52,6 @@ class ApiHelper {
                 $cities['suggestions'][] = array("value" => $location['name'], 'data' => $location['id'], 'longitude' => $center['lng'], 'latitude' => $center['lat']);
               }
         }
-
         return $cities;
     }
 
@@ -81,6 +80,8 @@ class ApiHelper {
         if ($query) {
             $response = $this->client->get('http://terminal2.expedia.com/x/activities/search?', $query);
             return $response->json();
+        } else {
+            return null;
         }
     }
 }

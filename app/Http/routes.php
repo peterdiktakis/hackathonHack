@@ -22,6 +22,7 @@ Route::get('date', 'SessionController@date');
 Route::get('location', 'SessionController@location');
 Route::get('hotel', 'ApiController@hotel');
 Route::get('activities', 'ApiController@activities');
+Route::get('yelp', 'ApiController@yelp');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

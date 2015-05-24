@@ -9,8 +9,8 @@ class PagesController extends Controller
 
     public function about()
     {
-//        $helper = GeoHelper::getInstance();
-//        $locations = $helper->get('Montreal');
+//      $helper = GeoHelper::getInstance();
+//      $locations = $helper->get('Montreal');
         return view('pages.about');
     }
 
