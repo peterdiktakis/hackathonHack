@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use League\Geotools\Coordinate\Coordinate;
 use \League\Geotools\Geotools;
 use Request;
+use Route;
 
 class SessionController extends Controller {
 
@@ -43,7 +44,6 @@ class SessionController extends Controller {
 	}
     public function storeSelections()
     {
-        if (Request::ajax()) {
           // store users activity / business selections in session.
             $activities = Request::get('activities');
             $bars = Request::get('bars');
@@ -51,11 +51,9 @@ class SessionController extends Controller {
             Session::forget('activities');
             Session::forget('bars');
             Session::forget('restaurants');
-            Session::put('activities', $activities);
-            Session::put('bars', $bars);
-            Session::put('restaurants', $restaurants);
-            return true;
-        }
+            if (isset($activities)) Session::put('activities', $activities);
+            if (isset($bars)) Session::put('bars', $bars);
+            if (isset($restaurants)) Session::put('restaurants', $restaurants);
     }
 
 }

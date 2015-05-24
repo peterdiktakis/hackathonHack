@@ -197,21 +197,22 @@ jQuery(document).ready(function ($) {
             $(this).addClass('selected')
         }
     })
-    $("#goNext").click(function() {
+    var activities = null;
+    var bars = null;
+    var restaurants = null;
+
+    $("#goButton").click(function() {
         // get each selected item.
-        var activities = false;
-        var bars = false;
-        var restaurants = false;
         $(".selected").each(function( index ) {
             switch($(this).attr('id')) {
-                case 'activityDiv':
-                    activities = true;
+                case 'activitiesDiv':
+                    activities = "activities";
                     break;
                 case 'barDiv':
-                    bars = true;
+                    bars = "bars";
                     break;
                 case 'restaurantDiv':
-                    restaurants = true;
+                    restaurants = "restaurants";
                     break;
             }
         });
@@ -220,14 +221,10 @@ jQuery(document).ready(function ($) {
             type: 'GET',
             url: host + '/storeSelections',
             data: {activities: activities, bars: bars, restaurants: restaurants},
-            success: function (msg) {
-                $('#carousel').trigger('owl.next');
+            success: function() {
+                $(location).attr('href', '/hotel');
             }
         });
-
-        // owl.trigger('owl.next');
-
-        //console.log("activities: " + activities + " bars " + bars + " restaurants " + restaurants);
 
     });
 });
