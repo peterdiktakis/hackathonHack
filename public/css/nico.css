@@ -249,7 +249,6 @@ color: #000000;
 }
 .hotel-description{
     color: #999;
-    margin-bottom: 40px;
 }
 
 .hotel-rating {
@@ -286,7 +285,22 @@ color: #000000;
     color: #000;
 }
 
-/*.pin-number {
-  position: absolute;
-  bottom:0 ;
-}*/
+.pin-number-sm {
+    position: absolute;
+    top: 5px;
+    left:12px;
+    color: #ffffff;
+}
+
+.pin-number-lg {
+    position: absolute;
+    top: 5px;
+    left:8px;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.pin-icon {
+    display: inline-block;
+    height: 30px;
+}

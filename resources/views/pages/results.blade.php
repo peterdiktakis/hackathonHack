@@ -133,9 +133,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
           <div class="col-md-4 col-sm-6">
             <div class="section match" @if (isset($hotel['DetailsUrl'])) onclick="location.href='{{$hotel['DetailsUrl']}}'" style="cursor: pointer" @endif>
 
-              <div class='col-xs-12'>
-                <p class='text-center'>{{ $num }}</p>
-              </div>
+
 
               <div class="row">
                 <div class="col-xs-3">
@@ -145,7 +143,9 @@ google.maps.event.addDomListener(window, 'load', initialize);
                 </div>
                 <div class="col-xs-9">
                   <div class="hotel-text-wrap">
-                    <h4 class="hotel-name">{{{ strlen($hotel['Name']) >= 30 ? substr($hotel['Name'], 0, 28)."..." : $hotel['Name']}}}</h4>
+                      <img src="/images/pin.png" class="pin-icon"/>
+                      <p class='text-center @if ($num >= 10)pin-number-lg @else pin-number-sm @endif'>{{ $num }}</p>
+                      <h4 class="hotel-name">{{{ strlen($hotel['Name']) >= 27 ? substr($hotel['Name'], 0, 25)."..." : $hotel['Name']}}}</h4>
                     <p class="hotel-location">{{$hotel['Location']['StreetAddress'].' '.$hotel['Location']['City'].' '.$hotel['Location']['Province'].' '.$hotel['Location']['Country']}}</p>
                   </div>
                 </div>
