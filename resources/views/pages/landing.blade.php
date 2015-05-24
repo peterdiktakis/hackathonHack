@@ -45,7 +45,7 @@
                         <div id='cities'>
 
                         </div>
-                        
+
 
 
                     </div>
@@ -188,6 +188,9 @@
     </script>
 
     <script type="text/javascript">
+
+    var owl = $("#carousel");
+
         var delay = (function () {
             var timer = 0;
             return function (callback, ms) {
@@ -223,12 +226,12 @@
                     $.ajax({
                         type: 'GET',
                         url: host + '/location',
-                        timeout: 2000,
                         data: {locationName: suggestion.value, locationId: suggestion.data, latitude: suggestion.latitude, longitude: suggestion.longitude},
                         success: function (msg) {
+                          owl.trigger('owl.next');
                         }
                     });
-                });
+                }
             }).keypress(function(e) {
 
                 if (e.keyCode === 13)
