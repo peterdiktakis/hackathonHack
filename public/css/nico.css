@@ -249,6 +249,7 @@ color: #000000;
 }
 .hotel-description{
     color: #999;
+    margin-bottom: 40px;
 }
 
 .hotel-rating {
@@ -278,9 +279,14 @@ color: #000000;
 }
 
 .nb-result{
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .bars h4{
     color: #000;
 }
+
+/*.pin-number {
+  position: absolute;
+  bottom:0 ;
+}*/
