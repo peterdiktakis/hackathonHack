@@ -210,7 +210,7 @@ html, body {
 }
 
 .section {
-    cursor:url('../images/cursor_black.png'), default;
+   /* cursor:url('../images/cursor_black.png'), default;*/
     margin: 20px auto 40px auto;
     opacity: 0.9;
     -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.85) ;
@@ -283,5 +283,6 @@ color: #000000;
     margin-top: 40px;
 }
 
-
-
+.bars h4{
+    color: #000;
+}
