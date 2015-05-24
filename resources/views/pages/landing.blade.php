@@ -45,7 +45,13 @@
           <p id="dateInput" class="text-center">
             <input type="text" id="startDate" class="date start" placeholder="Check in"/>
             <input type="text" id="endDate" class="date end" placeholder="Check out"/>
+
           </p>
+
+            <button class="text-center btn-default next">Next</button>
+
+
+
 
           <div id='cities'>
 
