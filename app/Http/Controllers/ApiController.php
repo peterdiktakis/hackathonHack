@@ -33,6 +33,14 @@ class ApiController extends Controller {
         if ($location) {
             $helper = ApiHelper::getInstance();
             $responses = $helper->getHotels($startDate, $endDate, $location, '5km');
+            $restaurants = null;
+            $activities = null;
+            $bars = null;
+            if (Session::get('bars') != "") $bars = $this->yelp('bar');
+            if (Session::get('activities') != "") $activities = $helper->activities();
+            if (Session::get('restaurants') != "") $restaurants = $this->yelp('restaurant');
+
+
             $geos = array();
             foreach($responses['HotelInfoList']['HotelInfo'] as $hotel) {
               $geos[] = [doubleval($hotel['Location']['GeoLocation']['Latitude']), doubleval($hotel['Location']['GeoLocation']['Longitude'])];
@@ -40,7 +48,7 @@ class ApiController extends Controller {
 
             $geos = json_encode($geos);
 
-            return view('pages.results',compact('responses', 'businesses', 'geos'));
+            return view('pages.results',compact('responses', 'businesses', 'geos', 'restaurants', 'activities', 'bars'));
             //return dd($responses);
         }
     }
@@ -57,15 +65,13 @@ class ApiController extends Controller {
         }
     }
 
-    public function yelp()
-    {
-        $selection = Request::get('selection');
+    public function yelp($businessType = null) {
+
+        if (!$businessType) $businessType = Session::get('selection');
         $helper = YelpHelper::getInstance();
         $locationName = Session::get('locationName');
         $longitude = Session::get('longitude');
         $latitude = Session::get('latitude');
-        $helper = YelpHelper::getInstance();
-        $businessType =Session::get('selection');
         return json_decode($helper->search($businessType, $locationName, $latitude . ',' . $longitude), true);
         //echo($helper->search('restaurant', $locationName, $latitude . ',' . $longitude));
     }
