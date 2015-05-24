@@ -292,39 +292,17 @@ select.select-activity option{
 
 .activity-div{
     background:#FFF;
-    opacity: .9;
     color:#000;
     width:300px;
-    height:auto;
+    height:300px;
+    margin:10px 20px;
     padding:8px;
-    -webkit-transition: all .25s ease;
-    -moz-transition: all .25s ease;
-    -ms-transition: all .25s ease;
-    -o-transition: all .25s ease;
-    transition: all .25s ease;
-    position:relative;
 }
 .activity-div img.activity-img{
     width:100%;
+    height100%;
 }
 .activity-div h4{
     color:#000;
-    text-align:center;
 }
-.activity-div:hover{
-    width:350px;
-    cursor:pointer;
-}
-.activity-div span{
-    position:absolute;
-    top:50%;
-    left:50%;
-    color:#2ecc71;
-    display:none;
-    margin:-35px 0 0 -35px;
-}
-.activity-div.selected span{
-    display: block;
-}
-
 /*END ACTIVITIES*/
