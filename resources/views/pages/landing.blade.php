@@ -48,7 +48,7 @@
 
           </p>
 
-            <button class="text-center btn-default next">Next</button>
+            <button class="center-block btn-default next">Next</button>
 
 
 
