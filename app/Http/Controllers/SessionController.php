@@ -11,36 +11,36 @@ use Request;
 class SessionController extends Controller {
 
 	public function date()
-    {
-        if (Request::ajax())
-        {
-            $startDate = Request::get('startDate');
-            $endDate = Request::get('endDate');
-            Session::put('startDate', $startDate);
-            Session::put('endDate', $endDate);
-            return array($startDate, $endDate);
-        }
-    }
+	{
+		if (Request::ajax())
+		{
+			$startDate = Request::get('startDate');
+			$endDate = Request::get('endDate');
+			Session::put('startDate', $startDate);
+			Session::put('endDate', $endDate);
+			return array($startDate, $endDate);
+		}
+	}
 
-    public function location()
-    {
-			if (Request::ajax())
-			{
-				Session::forget('locationName');
-				Session::forget('longitude');
-				Session::forget('latitude');
-                $locationName = Request::get('locationName');
-                $longitude = Request::get('longitude');
-                $latitude = Request::get('latitude');
+	public function location()
+	{
+		if (Request::ajax())
+		{
+			Session::forget('locationName');
+			Session::forget('longitude');
+			Session::forget('latitude');
+			$locationName = Request::get('locationName');
+			$longitude = Request::get('longitude');
+			$latitude = Request::get('latitude');
 
-                Session::put('locationName', $locationName);
-				Session::put('longitude', $longitude);
-				Session::put('latitude', $latitude);
+			Session::put('locationName', $locationName);
+			Session::put('longitude', $longitude);
+			Session::put('latitude', $latitude);
 
-                $helper = YelpHelper::getInstance();
-                echo($helper->search('restaurant', $locationName, $latitude . ',' . $longitude));
+			$helper = YelpHelper::getInstance();
+			echo($helper->search('restaurant', $locationName, $latitude . ',' . $longitude));
 
-            }
-    }
+		}
+	}
 
 }
