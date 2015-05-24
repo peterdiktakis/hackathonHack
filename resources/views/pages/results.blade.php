@@ -82,14 +82,8 @@
 
                         <p class="hotel-description">{{{isset($hotel['Description']) ? $hotel['Description'] : "No description available..."}}}</p>
 
-                        {{--<p>{{{isset($hotel['Price']['TotalRate'][0]) ? $hotel['Price']['TotalRate'][0] : "No Price set"}}}</p>--}}
+                        {{--<p>{{isset($hotel['Price']['TotalRate'][0]) ? $hotel['Price']['TotalRate'][0] : "No Price set"}}}</p>--}}
                         {{--<p>{{{isset($hotel['Price']['TotalRate'][1]) ? $hotel['Price']['TotalRate'][1] : "No Price set"}}}</p>--}}
-
-
-
-
-
-
 
                     </div>
                 </div>
@@ -104,7 +98,7 @@
     <script src="/js/jquery-match-height-master/jquery.matchHeight-min.js"></script>
 
     <script>
-        $(".match").matchHeight();
+
 
 
 
@@ -121,6 +115,8 @@
                     countTop += 1;
                 }
             });
+
+            $(".match").matchHeight();
 
 
             setTimeout(function () {

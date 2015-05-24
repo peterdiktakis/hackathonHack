@@ -35,13 +35,7 @@
         </div>
       </div>
 
-      <div class="carousel-item">
-        <h3>I hate JSON</h3>
 
-        <div id='bars'>
-          <p>in the div...</p>
-        </div>
-      </div>
 
 
 
@@ -75,6 +69,16 @@
 
         </div>
       </div>
+
+        <div class="carousel-item">
+            <h3>I hate JSON</h3>
+
+            <div id='bars'>
+                <p>in the div...</p>
+            </div>
+        </div>
+
+
       <div class="carousel-item">
       </div>
     </div>
@@ -259,6 +263,6 @@ $('#searchBox').autocomplete({
       }
     });
   }});
-  </script>
+</script>
 
-  @stop
+@stop
