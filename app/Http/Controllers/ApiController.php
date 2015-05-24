@@ -33,6 +33,7 @@ class ApiController extends Controller {
         if ($location) {
             $helper = ApiHelper::getInstance();
             $responses = $helper->getHotels($startDate, $endDate, $location, '5km');
+            $responses['HotelInfoList']['HotelInfo'] = array_slice($responses['HotelInfoList']['HotelInfo'], 0, 80);
             $restaurants = null;
             $activities = null;
             $bars = null;
