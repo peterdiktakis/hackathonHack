@@ -146,8 +146,6 @@
             });
 
             inProgress = false;
-
-
         });
 
 

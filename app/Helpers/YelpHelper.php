@@ -76,7 +76,6 @@ class YelpHelper {
         return $data;
     }
 
-
     public function search($term, $location, $coordinates) {
         $url_params = array();
         $url_params['term'] = $term ?: $this->DEFAULT_TERM;

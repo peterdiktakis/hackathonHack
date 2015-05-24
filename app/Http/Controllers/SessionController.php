@@ -37,8 +37,8 @@ class SessionController extends Controller {
 				Session::put('longitude', $longitude);
 				Session::put('latitude', $latitude);
 
-                $helper = YelpHelper::getInstance();
-                echo($helper->search('restaurant', $locationName, $latitude . ',' . $longitude));
+//                $helper = YelpHelper::getInstance();
+//                echo($helper->search('restaurant', $locationName, $latitude . ',' . $longitude));
 
             }
     }

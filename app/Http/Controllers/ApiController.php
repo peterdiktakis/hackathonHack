@@ -52,11 +52,12 @@ class ApiController extends Controller {
 
     public function yelp()
     {
+        $selection = Request::get('selection');
         $helper = YelpHelper::getInstance();
         $locationName = Session::get('locationName');
         $longitude = Session::get('longitude');
         $latitude = Session::get('latitude');
-        echo($latitude . ',' . $longitude);
-        dd(json_decode($helper->search('restaurant', $locationName, $latitude . ',' . $longitude)));
+        $helper = YelpHelper::getInstance();
+        echo($helper->search('restaurant', $locationName, $latitude . ',' . $longitude));
     }
 }
