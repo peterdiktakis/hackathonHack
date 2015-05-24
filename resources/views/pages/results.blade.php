@@ -126,6 +126,10 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
           {{--*/ $num++ /*--}}
 
+          <script type="text/javascript">
+            console.log($('#map'));
+          </script>
+
           <div class="col-md-4 col-sm-6">
             <div class="section match" @if (isset($hotel['DetailsUrl'])) onclick="location.href='{{$hotel['DetailsUrl']}}'" style="cursor: pointer" @endif>
 
