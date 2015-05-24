@@ -25,16 +25,32 @@ function initialize() {
     var marker = new google.maps.Marker({
          position: new google.maps.LatLng(locations[i][2], locations[i][3]),
          map: map,
+         animation: google.maps.Animation.DROP,
          icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + locations[i][0] + '|FFFFFF|000000'
     });
 
     marker.posId = locations[i][0];
+    marker.name = locations[i][1];
 
     google.maps.event.addListener(marker, 'click', function() {
 
       $('html, body').animate({
         scrollTop: $('#' + this.posId).offset().top
       }, 1000);
+    });
+
+    var infowindow = new google.maps.InfoWindow({
+      content: 'hold'
+    });
+
+    google.maps.event.addListener(marker, 'mouseover', function() {
+      infowindow.open(map, this);
+      infowindow.setContent(this.name);
+    });
+
+    // assuming you also want to hide the infowindow when user mouses-out
+    google.maps.event.addListener(marker, 'mouseout', function() {
+        infowindow.close();
     });
 }
 
@@ -94,9 +110,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
             <div class="section match" >
               <div class="row">
                 <div class="col-xs-3">
+                  @if(isset($business['image_url']))
                   <div class="thumb-wrap">
                     <img src={{{($business['image_url'])}}} alt="bar-thumb" class="img-responsive hotel-thumb"/>
                   </div>
+                  @endif
                 </div>
                 <div class="col-xs-9">
                   <div>
