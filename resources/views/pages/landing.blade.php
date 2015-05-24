@@ -54,7 +54,7 @@
            </div>
           </div>
             <div class="carousel-item">
-                <div class="container" style="height:400px">
+                <div class="container" style="height:360px">
                 <div class="center-block row">
                     <div class="col-xs-12 col-sm-4">
                         <div id="barDiv" class="options activity-div center-block">
@@ -75,7 +75,7 @@
 
                     <div class="col-xs-12 col-sm-4">
                         <div id="activitiesDiv" class="options activity-div center-block">
-                            <img src="/images/restaurant.jpg" alt="bar" class="activity-img">
+                            <img src="/images/activities.jpeg" alt="bar" class="activity-img">
                             <h4>Activities</h4>
                             <span class="fa fa-check fa-5x"></span>
                         </div>
