@@ -56,18 +56,29 @@
         </div>
       </div>
       <div class="carousel-item">
-        <div id='activities' class="text-center">
+          <div id='activities'>
 
 
-          <h1 class="text-center">Choose an activity!</h1>
-          <select class="select-activity">
-            <option value="bar">Bar</option>
-            <option value="restaurant" selected>Restaurant</option>
-            <option value="family">Family trip</option>
+              <h1 class="text-center">Choose an activity!</h1>
 
-          </select>
+              <div class="center-block">
+                  <div class="activity-div col-xs-12 col-sm-6">
+                      <img src="/images/drinks-in-bar.jpg" alt="bar" class="activity-img">
+                      <h4>Bar</h4>
+                  </div>
 
-        </div>
+                  <div class="activity-div col-xs-12 col-sm-6">
+                      <img src="/images/restaurant.jpg" alt="bar" class="activity-img">
+                      <h4>Restaurant</h4>
+                  </div>
+
+                  <div class="activity-div col-xs-12 col-sm-6">
+                      <img src="/images/restaurant.jpg" alt="bar" class="activity-img">
+                      <h4>Activities</h4>
+                  </div>
+
+              </div>
+          </div>
       </div>
 
         <div class="carousel-item">
