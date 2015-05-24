@@ -20,9 +20,13 @@ function initialize() {
 
   var locations = {{ $geos }};
 
+
+
   for (i = 0; i < locations.length; i++) {
 
     var contentString = 'hello';
+
+
 
     var infowindow = new google.maps.InfoWindow({
       content: contentString
