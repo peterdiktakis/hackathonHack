@@ -10,11 +10,14 @@ class SessionController extends Controller {
 
 	public function date()
     {
-        $startDate = Request::get('startDate');
+			if (Request::ajax())
+			{
+				$startDate = Request::get('startDate');
         $endDate = Request::get('endDate');
         Session::put('startDate', $startDate);
         Session::put('endDate', $endDate);
         return array($startDate, $endDate);
+			}
     }
 
     public function location()
@@ -30,5 +33,4 @@ class SessionController extends Controller {
 				var_dump(Session::all());
 			}
     }
-
 }
