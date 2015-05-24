@@ -63,7 +63,7 @@
                                 <div class="activity-div center-block">
                                     <img src="/images/drinks-in-bar.jpg" alt="bar" class="activity-img">
                                     <h4>Bar</h4>
-                                    <span class="fa fa-check fa-5x"></span>
+
                                 </div>
                             </div>
 
@@ -71,6 +71,7 @@
                                 <div class="activity-div center-block">
                                     <img src="/images/restaurant.jpg" alt="bar" class="activity-img">
                                     <h4>Restaurant</h4>
+                                    <span class="fa fa-check fa-5x"></span>
                                 </div>
                             </div>
 
@@ -78,6 +79,7 @@
                                 <div class="activity-div center-block">
                                     <img src="/images/restaurant.jpg" alt="bar" class="activity-img">
                                     <h4>Activities</h4>
+                                    <span class="fa fa-check fa-5x"></span>
                                 </div>
                             </div>
 
