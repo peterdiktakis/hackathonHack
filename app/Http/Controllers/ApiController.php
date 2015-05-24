@@ -29,11 +29,13 @@ class ApiController extends Controller {
         $longitude = Session::get('longitude');
         $latitude = Session::get('latitude');
         $location = ($longitude && $latitude) ? ($latitude . ',' . $longitude) : Session::get('locationName');
+        $businesses = $this->yelp();
 
         if ($location) {
             $helper = ApiHelper::getInstance();
             $responses = $helper->getHotels($startDate, $endDate, $location, '5km');
-            return view('pages.results',compact('responses'));
+
+            return view('pages.results',compact('responses', 'businesses'));
             //return dd($responses);
         }
     }
@@ -58,6 +60,8 @@ class ApiController extends Controller {
         $longitude = Session::get('longitude');
         $latitude = Session::get('latitude');
         $helper = YelpHelper::getInstance();
-        echo($helper->search('restaurant', $locationName, $latitude . ',' . $longitude));
+        $businessType =Session::get('selection');
+        return json_decode($helper->search($businessType, $locationName, $latitude . ',' . $longitude), true);
+        //echo($helper->search('restaurant', $locationName, $latitude . ',' . $longitude));
     }
 }

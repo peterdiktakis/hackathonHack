@@ -66,16 +66,48 @@ google.maps.event.addDomListener(window, 'load', initialize);
           <h1 class="text-center">Top 3</h1>
         </div>
 
-
         <div class="row">
+        <div class="top"></div>
+            </div>
+
+            <div class="col-xs-12 fancy-test">
+                <h1 class="text-center">Business Activity</h1>
+            </div>
+            <div class="row">
+            @foreach ($businesses['businesses'] as $business)
+                <div class="col-md-4 col-sm-6">
+                    <div class="section match" >
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <div class="thumb-wrap">
+                                    <img src={{{($business['image_url'])}}} alt="bar-thumb" class="img-responsive hotel-thumb"/>
+                                </div>
+                            </div>
+                            <div class="col-xs-9">
+                                <div>
+                                    <h4 class="hotel-name">{{{strlen($business['name']) >= 30 ? substr($business['name'], 0, 28)."..." : $business['name']}}}</h4>
+                                </div>
+                                @if(isset($business['rating']))
+                                    <p class="hotel-rating">Guest rating :
+                                        @for ($i = 0; $i <= $business['rating'] -1; $i++)
+                                            <i class="fa fa-star"></i>
+                                        @endfor
+                                        @if ($business['rating'] - floor($business['rating']) >= 0.5)
+                                            <i class="fa fa-star-half"></i>
+                                        @endif
+                                        <span class="grade">{{$business['rating']}}</span></p>
+                                @endif
+                            </div>
+                            <div class="col-xs-12">
+
+                            </div>
+                        </div>
 
 
-          <div class="top">
-
-          </div> {{-- VOODOOO JQUERY GOING ON--}}
-        </div>
-
-
+                    </div>
+                </div>
+            @endforeach
+                </div>
 
 
         <div class="fancy-test ">

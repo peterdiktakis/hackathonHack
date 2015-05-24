@@ -11,7 +11,7 @@ class YelpHelper {
     private $API_HOST = 'api.yelp.com';
     private $DEFAULT_TERM = 'dinner';
     private $DEFAULT_LOCATION = 'San Francisco, CA';
-    private $SEARCH_LIMIT = 12;
+    private $SEARCH_LIMIT = 6;
     private $SEARCH_PATH = '/v2/search/';
     private $BUSINESS_PATH = '/v2/business/';
 

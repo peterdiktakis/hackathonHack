@@ -200,7 +200,12 @@ $(document).ready(function () {
         var html = "";
         for (var i in json.businesses) {
 
-            html +=  "<div class='col-lg-4'>" + "<div class='section'>" + "<h4>" + json.businesses[i].name + "</h4>" + "</div>" + "</div>";
+            html +=  "<div class='col-lg-4'>" + "<div class='section'>" + "<div class='row'>";
+            html +=  "<div class='col-xs-4'>" + "<img src='" + json.businesses[i].image_url + "' /img>" +"</div>";
+            html += "<div class='col-xs-8'>";
+            html +=  "<h4>" +  json.businesses[i].name  + "</h4>";
+            html += "</div>";
+            html += "</div>" + "</div>" + "</div>";
         }
 
         $('.bars').html(html);
