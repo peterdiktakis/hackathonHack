@@ -19,9 +19,16 @@ class SessionController extends Controller {
 
     public function location()
     {
-        Session::put('locationName', Request::get('locationName'));
-        Session::put('longitude', Request::get('longitude'));
-        Session::put('latitude', Request::get('latitude'));
+			if (Request::ajax())
+			{
+				Session::forget('locationName');
+				Session::forget('longitude');
+				Session::forget('latitude');
+				Session::put('locationName', Request::get('locationName'));
+				Session::put('longitude', Request::get('longitude'));
+				Session::put('latitude', Request::get('latitude'));
+				var_dump(Session::all());
+			}
     }
 
 }

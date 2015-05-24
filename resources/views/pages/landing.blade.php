@@ -190,6 +190,7 @@
     <script type="text/javascript">
 
     var owl = $("#carousel");
+    var request;
 
         var delay = (function () {
             var timer = 0;
@@ -210,7 +211,10 @@
 
                     delay(function(){
                         $(".load-listener").addClass('loader-sm');
-                        $.ajax({
+                        if (request) {
+                          request.abort();
+                        }
+                        request = $.ajax({
                             type: 'GET',
                             url: host + '/suggestions',
                             data: {location: searchText},
