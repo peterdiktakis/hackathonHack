@@ -14,6 +14,10 @@
     <link href="{{ asset('/css/nico.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/noham.css') }}" rel="stylesheet">
 
+		<!-- Scripts -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
 	@yield('headScripts')
 
 	<!-- Fonts -->
@@ -67,10 +71,6 @@
 
 	@yield('content')
     @yield('footer')
-
-	<!-- Scripts -->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
     @yield('page-script')
 </body>
 </html>
