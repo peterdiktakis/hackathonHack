@@ -71,11 +71,9 @@
       </div>
 
         <div class="carousel-item">
-            <div class="col-md-4 col-sm-6">
-                <div class="section bars">
-
-                </div>
-            </div>
+            <div class='container'><div class='row'>
+            <div class="bars"></div>
+            </div></div>
         </div>
 
 
@@ -201,10 +199,11 @@ $(document).ready(function () {
     function setUpYelp(json) {
         var html = "";
         for (var i in json.businesses) {
-            html += "<h4>" + json.businesses[i].name + "</h4>";
+
+            html +=  "<div class='col-lg-4'>" + "<div class='section'>" + "<h4>" + json.businesses[i].name + "</h4>" + "</div>" + "</div>";
         }
 
-        $('#bars').html(html);
+        $('.bars').html(html);
     }
 
 
