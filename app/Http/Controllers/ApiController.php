@@ -33,8 +33,14 @@ class ApiController extends Controller {
         if ($location) {
             $helper = ApiHelper::getInstance();
             $responses = $helper->getHotels($startDate, $endDate, $location, '5km');
+            $geos = array();
+            foreach($responses['HotelInfoList']['HotelInfo'] as $hotel) {
+              $geos[] = [doubleval($hotel['Location']['GeoLocation']['Latitude']), doubleval($hotel['Location']['GeoLocation']['Longitude'])];
+            }
 
-            return view('pages.results',compact('responses', 'businesses'));
+            $geos = json_encode($geos);
+
+            return view('pages.results',compact('responses', 'businesses', 'geos'));
             //return dd($responses);
         }
     }
