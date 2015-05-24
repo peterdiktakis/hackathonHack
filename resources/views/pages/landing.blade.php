@@ -197,8 +197,29 @@ $(document).ready(function () {
 
 </script>
 <script type="text/javascript">
-$('.select-activity').change(function () {
-  $('#carousel').trigger('owl.next');
+
+    function setUpYelp(json) {
+        var html = "";
+        for (var i in json.businesses) {
+            html += "<h4>" + json.businesses[i].name + "</h4>";
+        }
+
+        $('#bars').html(html);
+    }
+
+
+    var select = $('.select-activity');
+    select.change(function () {
+
+        $.ajax({
+            type: 'GET',
+            url: host + '/yelp',
+            data: {selection: select.val()},
+            success: function (msg) {
+                setUpYelp(eval('(' + msg + ')'));
+                $('#carousel').trigger('owl.next');
+            }
+        });
 });
 </script>
 
@@ -207,16 +228,6 @@ $('.select-activity').change(function () {
 var owl = $("#carousel");
 var request;
 
-
-function setUpYelp(json) {
-  var html = "";
-  for (var i in json.businesses) {
-    html += "<h4>" + json.businesses[i].name + "</h4>";
-  }
-  
-  console.log(json.businesses)
-  $('#bars').html(html);
-}
 
 var delay = (function () {
   var timer = 0;
@@ -259,7 +270,6 @@ $('#searchBox').autocomplete({
       data: {locationName: suggestion.value, locationId: suggestion.data, latitude: suggestion.latitude, longitude: suggestion.longitude},
       success: function (msg) {
         owl.trigger('owl.next');
-        setUpYelp(eval('(' + msg + ')'));
       }
     });
   }});
