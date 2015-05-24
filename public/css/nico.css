@@ -304,3 +304,7 @@ color: #000000;
     display: inline-block;
     height: 30px;
 }
+
+.thumb-act {
+    margin-left: 15px;
+}

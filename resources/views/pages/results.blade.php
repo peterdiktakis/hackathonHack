@@ -82,11 +82,14 @@ google.maps.event.addDomListener(window, 'load', initialize);
           <div class="top"></div>
         </div>
 
-        <div class="col-xs-12 fancy-test">
-          <h1 class="text-center">Business Activity</h1>
-        </div>
-        <div class="row">
-          @foreach ($businesses['businesses'] as $business)
+
+        @if (isset($bars))
+            <div class="col-xs-12 fancy-test">
+                <h1 class="text-center">Bars</h1>
+            </div>
+            <div class="row">
+
+          @foreach ($bars['businesses'] as $business)
           <div class="col-md-4 col-sm-6">
             <div class="section match" >
               <div class="row">
@@ -122,7 +125,98 @@ google.maps.event.addDomListener(window, 'load', initialize);
               </div>
             </div>
             @endforeach
-          </div>
+            </div>
+            @endif
+
+        @if (isset($restaurants))
+            <div class="col-xs-12 fancy-test">
+                <h1 class="text-center">Restaurants</h1>
+            </div>
+            <div class="row">
+
+                @foreach ($restaurants['businesses'] as $business)
+                    <div class="col-md-4 col-sm-6">
+                        <div class="section match" >
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <div class="thumb-wrap">
+                                        <img src={{{($business['image_url'])}}} alt="bar-thumb" class="img-responsive hotel-thumb"/>
+                                    </div>
+                                </div>
+                                <div class="col-xs-9">
+                                    <div>
+                                        <h4 class="hotel-name">{{{strlen($business['name']) >= 30 ? substr($business['name'], 0, 28)."..." : $business['name']}}}</h4>
+                                        <p class="hotel-location">{{{isset($business['location']['display_address']) ? $business['location']['display_address'][0] . ", " . $business['location']['postal_code']: "No location set..."}}}</p>
+                                    </div>
+                                    @if(isset($business['rating']))
+                                        <p class="hotel-rating">Guest rating :
+                                            @for ($i = 0; $i <= $business['rating'] -1; $i++)
+                                                <i class="fa fa-star"></i>
+                                            @endfor
+                                            @if ($business['rating'] - floor($business['rating']) >= 0.5)
+                                                <i class="fa fa-star-half"></i>
+                                            @endif
+                                            <span class="grade">{{$business['rating']}}</span></p>
+                                    @endif
+                                </div>
+
+
+                                <div class="col-xs-12">
+                                    <p class="hotel-description">&#34;{{{isset($business['snippet_text']) ? $business['snippet_text'] : "No description available..."}}}&#34;</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        @endif
+
+
+
+        @if (isset($activities))
+            <div class="col-xs-12 fancy-test">
+                <h1 class="text-center">Activities</h1>
+            </div>
+            <div class="row">
+
+                @foreach (array_slice($activities['activities'],0,6) as $business)
+                    <div class="col-md-4 col-sm-6">
+                        <div class="section match" >
+                            <div class="row">
+
+                                        <img src={{{($business['imageUrl'])}}} alt="bar-thumb" class="img-responsive thumb-act"/>
+
+
+                                <div class="col-xs-12">
+                                    <div>
+                                        <h4 class="">{{{strlen($business['title']) >= 30 ? substr($business['title'], 0, 28)."..." : $business['title']}}}</h4>
+                                        <p class="">{{{isset($business['fromPrice']) ? $business['fromPrice'] . " " .  $business['fromPriceLabel']: "No Price set..."}}}</p>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xs-12">
+                                    <p class="hotel-description">Duration :{{{isset($business['duration']) ? $business['duration'] : "No duration available..."}}}</p>
+                                    <p class="hotel-description">
+                                        @foreach ($business['categories'] as $cat)
+                                        {{$cat . " "}}
+                                    @endforeach
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        @endif
+
+
+
+
 
 
           <div class="fancy-test ">
