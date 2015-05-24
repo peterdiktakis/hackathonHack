@@ -86,6 +86,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
                             <div class="col-xs-9">
                                 <div>
                                     <h4 class="hotel-name">{{{strlen($business['name']) >= 30 ? substr($business['name'], 0, 28)."..." : $business['name']}}}</h4>
+                                    <p class="hotel-location">{{{isset($business['location']['display_address']) ? $business['location']['display_address'][0] . ", " . $business['location']['postal_code']: "No location set..."}}}</p>
                                 </div>
                                 @if(isset($business['rating']))
                                     <p class="hotel-rating">Guest rating :
@@ -98,8 +99,10 @@ google.maps.event.addDomListener(window, 'load', initialize);
                                         <span class="grade">{{$business['rating']}}</span></p>
                                 @endif
                             </div>
-                            <div class="col-xs-12">
 
+
+                            <div class="col-xs-12">
+                                <p class="hotel-description">&#34;{{{isset($business['snippet_text']) ? $business['snippet_text'] : "No description available..."}}}&#34;</p>
                             </div>
                         </div>
 
