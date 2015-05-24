@@ -96,7 +96,7 @@ body {
     -webkit-background-size: cover;
     background-size: cover;
     background-attachment: fixed;
-    cursor:url('../images/cursor.png'), pointer;
+    /*cursor:url('../images/cursor.png'), pointer;*/
 }
 
 .form-group {
@@ -187,7 +187,7 @@ html, body {
 }
 
 .autocomplete-suggestions:hover{
-    cursor:url('../images/cursor_black.png'), default;
+   /* cursor:url('../images/cursor_black.png'), default;*/
 }
 
 .loader-sm {
