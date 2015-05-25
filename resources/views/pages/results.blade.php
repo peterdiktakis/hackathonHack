@@ -66,12 +66,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
   <div class="loader"></div>
   <div class="loader-overlay"></div>
 </div>
-<div class="name">
-  <h3>&#47;&#47;Hack</h3>
-</div>
-<div class="hack">
-  <img src="/images/hackathon.png" alt="hackathon"/>
-</div>
 <div class="results-page">
   <div class="container">
     <div class="row">
@@ -91,7 +85,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
         <div class=" fancy-test">
-          <h1 class="text-center">Top 3</h1>
+          <h1 class="text-center">Top</h1>
         </div>
 
         <div class="row">

@@ -17,9 +17,9 @@
         <div class="page">
             <div id="carousel" class="owl-carousel">
                 <div class="carousel-item">
-                    <h1 class='text-center'>Welcome to our Travel App</h1>
+                    <h1 class='text-center'>Welcome to //Travel</h1>
 
-        <h3 class='text-center'>Travel deep into the Voodoo !</h3>
+        <h3 class='text-center'>Where do you want to go?</h3>
 
         <div class="search">
           {!! Form::open(array('method' => 'get', 'url' => 'test', 'id' => 'searchForm')) !!}

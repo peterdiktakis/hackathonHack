@@ -32,6 +32,14 @@
 
 </head>
 <body>
+
+	<div class="name">
+	  <a href="/" style="text-decoration:none;"><h3>&#47;&#47;Hack</h3><a>
+	</div>
+	<div class="hack">
+	  <img src="/images/hackathon.png" alt="hackathon"/>
+	</div>
+
 <!--
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
